@@ -86,7 +86,6 @@ body {
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
     color: #fff;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
 }
@@ -115,7 +114,6 @@ body {
 }
 
 .section a:hover {
-    text-decoration: underline;
     color: #fff;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
 }
@@ -140,19 +138,17 @@ body {
 }
 
 .project:hover a {
-    text-decoration: underline;
     color: #fff;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
 }
 
 .project:hover h3 {
     color: #fff !important;
-    text-decoration: underline;
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
 }
 
 .project:hover .line {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1.5px solid #fff;
     box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
 }
 
@@ -171,7 +167,7 @@ body {
 /* The line stretches */
 .project-title .line {
     flex-grow: 1;
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1.5px solid #e3e3e3;
 }
 
 /* Plus stays at the right */
