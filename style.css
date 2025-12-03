@@ -30,6 +30,10 @@ html, body {
 /* Body Styling */
 body {
     background-color: #1b1b1b;
+    background-image: url(assets/CATFIGHT_SCAN_2560.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     line-height: 1;
     overflow: visible;
 }
