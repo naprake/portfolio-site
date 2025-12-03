@@ -7,6 +7,22 @@
     scroll-behavior: smooth;
 }
 
+*::selection {
+    background: none;
+    color: #ffffff;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px red, 0 0 4px red, 0 0 5px red, 0 0 6px red, 0 0 7px red;
+}
+*::-moz-selection {
+    background: none;
+    color: #ffffff;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px red, 0 0 4px red, 0 0 5px red, 0 0 6px red, 0 0 7px red;
+}
+*::-webkit-selection {
+    background: none;
+    color: #ffffff;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px red, 0 0 4px red, 0 0 5px red, 0 0 6px red, 0 0 7px red;
+}
+
 html, body {
     height: 100%;
 }
@@ -14,8 +30,8 @@ html, body {
 /* Body Styling */
 body {
     background-color: #1b1b1b;
-    color: #ffffff;
     line-height: 1;
+    overflow: visible;
 }
 
 /* Content Wrapper */
@@ -71,7 +87,8 @@ body {
 
 .nav-links a:hover {
     text-decoration: underline;
-    color: red;
+    color: #fff;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
 }
 
 
@@ -99,7 +116,8 @@ body {
 
 .section a:hover {
     text-decoration: underline;
-    color: red;
+    color: #fff;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
 }
 
 .project {
@@ -107,11 +125,63 @@ body {
     position: relative;
 }
 
-.project h3:hover {
+.project:hover {
     cursor: pointer;
-    text-decoration: underline;
-    color: red;
 }
+
+.project h3 {
+    color: #e3e3e3;
+    text-decoration: none;
+}
+
+.project a {
+    color: #e3e3e3;
+    text-decoration: none;
+}
+
+.project:hover a {
+    text-decoration: underline;
+    color: #fff;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
+}
+
+.project:hover h3 {
+    color: #fff !important;
+    text-decoration: underline;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
+}
+
+.project:hover .line {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px red, 0 0 8px red, 0 0 10px red, 0 0 12px red, 0 0 12px red;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+/* Title stays left */
+.project-title .title-text {
+    white-space: nowrap; /* prevents wrapping */
+}
+
+/* The line stretches */
+.project-title .line {
+    flex-grow: 1;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+/* Plus stays at the right */
+.project-title .plus {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+
+
 
 .project-image {
     width: 100%;
