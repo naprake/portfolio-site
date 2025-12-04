@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <meta name="theme-color" content="#E92128">
     <meta name="theme-color" content="#E92128" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#E92128" media="(prefers-color-scheme: dark)">
 
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" type="image/x-icon">
-    <link rel="favicon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/favicon_32.png">
-    <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/favicon_16.png">
-
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" type="image/x-icon">
+    <link rel="favicon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/icons/favicon_32.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/icons/favicon_16.png">
     <title>Anakin de Wet</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -29,101 +30,43 @@
 </head>
 
 <body>
+    <div class="overlay-background">
 
-    <div class="content-wrapper">
+            <!-- Navigation -->
+            <header class="header">
+                <nav class="nav">
+                    <div class="logo-container">
+                        <div class="logo">
+                            <a href="#">Anakin de Wet</a>
+                        </div>
+                        <div class="logo-symbol">
+                            CD
+                        </div>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-        <!-- Navigation -->
-        <header class="header">
-            <nav class="nav">
-                <h1 class="logo">
-                    <a href="#">Anakin de Wet</a>
-                </h1>
-                <ul class="nav-links">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+            <div class="socials">
+                <div id="instagram">
+                    <a href="https://www.instagram.com/anakindewet.design/" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <p>You can contact me at: <a href="mailto:anakindewet@yahoo.de">anakindewet@yahoo.de</a></p>
+            </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>
-                I am a Communication Design student at the Univversity of applied Sciences Hamburg (HAW Hamburg).
-                My interests include web design, graphic design, and painting. 
-                Currently, I am in my third semester and eager to learn and grow in the field of design.
-            </p>
-        </section>
+            <footer class="footer">
+                <p>© 2025 Anakin de Wet</p>
+            </footer>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            
-            <div class="project">
-                <h3  class="project-title">
-                    <span class="title-text">
-                        <a href="zephr.html">ZEPHR - Brand Design</a>
-                    </span>
-                    <span class="line"></span>
-                    <span class="plus">+</span>
-                </h3>
-            </div>
-            <div class="project">
-                <h3  class="project-title">
-                    <span class="title-text">
-                        <a href="typeface.html">What is a Typeface? - Poster Design</a>
-                    </span>
-                    <span class="line"></span>
-                    <span class="plus">+</span>
-                </h3>
-            </div>
-            <div class="project">
-                <h3 class="project-title">"Ich sehe was, was du nicht siehst" - Zine Collaboration</h3>
-                <span class="plus">+</span>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Ignit - App Design</h3>
-                <span class="plus">+</span>
-            </div>
-            <div class="project">
-                <h3 class="project-title">B&W Portrait Photography</h3>
-                <span class="plus">+</span>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Ikebana - Sculpture</h3>
-                <span class="plus">+</span>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Drawings - Course with Henning Kles</h3>
-                <span class="plus">+</span>
-            </div>
-            <div class="project">
-                <h3 class="project-title">B&W Portrait Photography</h3>
-                <span class="plus">+</span>
-            </div>
-            <div class="project">
-                <h3 class="project-title">Entangled - Landart</h3>
-                <span class="plus">+</span>
-            </div>
-            <div class="project">
-                <h3 class="project-title">FOG - Video Work</h3>
-                <span class="plus">+</span>
-            </div>
-
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>You can contact me at: <a href="mailto:anakindewet@yahoo.de">anakindewet@yahoo.de</a></p>
-        </section>
-
-        <footer class="footer">
-            <p>© 2025 Anakin de Wet</p>
-        </footer>
-
-    </div> <!-- END content-wrapper -->
+    </div> <!-- END overlay-background -->    
 
 </body>
 
