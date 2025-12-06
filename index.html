@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style2.css">
 
     <meta name="theme-color" content="#E92128">
     <meta name="theme-color" content="#E92128" media="(prefers-color-scheme: light)">
@@ -13,61 +15,95 @@
     <link rel="favicon" href="assets/icons/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/icons/favicon_32.png">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/icons/favicon_16.png">
-    <title>Anakin de Wet</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Tilt+Neon&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <title>Anakin de Wet</title>
 
     <meta property="og:image" content="assets/favicon.png">
-    <meta property="og:title" content="Anakin de Wet Portfolio">
+    <meta property="og:title" content="Anakin de Wet">
     <meta property="og:description" content="Portfolio of Anakin de Wet">
     <meta property="og:logo" content="assets/favicon.png">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Anakin de Wet Portfolio">
+    <meta property="og:site_name" content="Anakin de Wet">
 </head>
 
 <body>
-    <div class="overlay-background">
 
-            <!-- Navigation -->
-            <header class="header">
-                <nav class="nav">
-                    <div class="logo-container">
-                        <div class="logo">
-                            <a href="#">Anakin de Wet</a>
-                        </div>
-                        <div class="logo-symbol">
-                            CD
-                        </div>
-                    </div>
-                    <ul class="nav-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+    <header class="header">
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu-item"><a href="">Recent Works</a></li>
+                <li class="menu-item"><a href="">About</a></li>
+            </ul>
 
-            <div class="socials">
-                <div id="instagram">
-                    <a href="https://www.instagram.com/anakindewet.design/" target="_blank">Instagram</a>
+            <div class="logo">
+                <a href="">Anakin de Wet</a>
+            </div>
+
+            <ul class="links">
+                <li class="links-item"><a href="">Instagram</a></li>
+                <li class="links-item"><a href="">Contact</a></li>
+            </ul>
+
+            <!-- BURGER BUTTON -->
+            <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!-- MOBILE MENU (hidden by default) -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="">Recent Works</a>
+            <a href="">About</a>
+            <a href="">Instagram</a>
+            <a href="">Contact</a>
+        </div>
+    </header>
+
+
+    <div class="wrapper">
+        <section id="" class="section">
+            <div class="scroll-container">
+                <div class="image-container-portrait">
+                    <img src="assets/images/05_Malerei.JPG" alt="Malerei">
+                </div>
+                <div class="image-container-landscape">
+                    <img src="assets/images/CATFIGHT_SCAN_3840.jpg" alt="CATFIGHT">
+                </div>
+                <div class="image-container-landscape">
+                    <img src="assets/images/DSCF6491.JPG" alt="Portrait">
+                </div>
+                <div class="image-container-portrait">
+                    <img src="assets/images/FINAL_POSTER_WhiteOuter.png" alt="Poster">
+                </div>
+                <div class="image-container-landscape">
+                    <img src="assets/images/Packaging.png" alt="Brand Design">
                 </div>
             </div>
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h2>Contact</h2>
-                <p>You can contact me at: <a href="mailto:anakindewet@yahoo.de">anakindewet@yahoo.de</a></p>
-            </section>
+        </section>
+    </div>
 
-            <footer class="footer">
-                <p>© 2025 Anakin de Wet</p>
-            </footer>
+    <footer class="footer">
+        <p>© 2025 Anakin de Wet</p>
+    </footer>
 
-    </div> <!-- END overlay-background -->    
+    <script>
+        console.log("JS loaded");
+
+        const burger = document.getElementById("burger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        burger.addEventListener("click", () => {
+            console.log("clicked");   // test
+            burger.classList.toggle("active");
+            mobileMenu.classList.toggle("open");
+        });
+    </script>
 
 </body>
-
 </html>
