@@ -1,0 +1,72 @@
+/* ----------------------------------------------------------- */
+/* HORIZONTAL IMAGE GALLERY                                    */
+/* ----------------------------------------------------------- */
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    gap: 8vw;
+    overflow-x: auto;
+    padding: 6vh 50vw 6vh 30vw;
+    scroll-snap-type: x mandatory;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.image-container-portrait,
+.image-container-landscape {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image Sizes */
+.image-container-landscape img {
+    width: 50vw;
+    border-radius: 4px;
+}
+
+.image-container-portrait img {
+    width: 30vw;
+    border-radius: 4px;
+}
+
+/* Enlarged center image effect */
+.image-container-portrait img,
+.image-container-landscape img {
+    transition: transform 0.5s ease;
+    transform: scale(0.9);
+}
+
+.in-view img {
+    transform: scale(1.1);
+}
+
+
+/* ----------------------------------------------------------- */
+/* RESPONSIVE BREAKPOINTS                                      */
+/* ----------------------------------------------------------- */
+
+@media (min-width: 1280px) {
+    .image-container-landscape img { width: 45vw; }
+    .image-container-portrait img { width: 25vw; }
+}
+
+@media (max-width: 900px) {
+    .image-container-landscape img { width: 80vw; }
+    .image-container-portrait img { width: 55vw; }
+}
+
+@media (max-width: 600px) {
+    .scroll-container {
+        gap: 12vw;
+        padding: 4vh 8vw;
+    }
+
+    .image-container-landscape img { width: 80vw; }
+    .image-container-portrait img { width: 70vw; }
+}
