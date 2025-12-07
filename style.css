@@ -171,7 +171,7 @@ nav {
     align-items: center;      /* <-- vertically center images */
     gap: 8vw;
     overflow-x: auto;
-    padding: 6vh 5vw;
+    padding: 6vh 35vw 6vh 30vw;
     scroll-snap-type: x mandatory;
 }
 
@@ -192,11 +192,13 @@ nav {
 /* Landscape images */
 .image-container-landscape img {
     width: 50vw;
+    border-radius: 4px;
 }
 
 /* Portrait images */
 .image-container-portrait img {
     width: 30vw;
+    border-radius: 4px;
 }
 
 /* ----------------------------------------------------------- */
@@ -259,3 +261,48 @@ nav {
     bottom: 0;
 }
 
+/* ----------------------------------------------------------- */
+/* SCROLL IMAGE ENLARGE WHEN CENTERED                          */
+/* ----------------------------------------------------------- */
+
+.image-container-portrait img,
+.image-container-landscape img {
+    transition: transform 0.5s ease;
+    transform: scale(0.9);  /* default smaller */
+}
+
+.in-view img {
+    transform: scale(1.1);  /* enlarge when centered */
+}
+
+
+/* ----------------------------------------------------------- */
+/* LIGHTBOX (fullscreen image viewer)                           */
+/* ----------------------------------------------------------- */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2000;
+}
+
+.lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+}

@@ -30,6 +30,10 @@
     <meta property="og:site_name" content="Anakin de Wet">
 </head>
 
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
 <body>
 
     <header class="header">
@@ -99,9 +103,52 @@
         const mobileMenu = document.getElementById("mobileMenu");
 
         burger.addEventListener("click", () => {
-            console.log("clicked");   // test
             burger.classList.toggle("active");
             mobileMenu.classList.toggle("open");
+        });
+
+        /* ----------------------------------------------------------- */
+        /* IMAGE ENLARGE ON CENTER VIEW                                */
+        /* ----------------------------------------------------------- */
+
+        const containers = document.querySelectorAll(".image-container-landscape, .image-container-portrait");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                    } else {
+                        entry.target.classList.remove("in-view");
+                    }
+                });
+            },
+            {
+                root: document.querySelector(".scroll-container"),
+                threshold: 0.6   // more than half visible = active
+            }
+        );
+
+        containers.forEach(c => observer.observe(c));
+
+
+        /* ----------------------------------------------------------- */
+        /* LIGHTBOX CLICK TO EXPAND IMAGE                              */
+        /* ----------------------------------------------------------- */
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+
+        document.querySelectorAll(".scroll-container img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add("open");
+            });
+        });
+
+        // Close when clicking background
+        lightbox.addEventListener("click", () => {
+            lightbox.classList.remove("open");
         });
     </script>
 
