@@ -48,6 +48,7 @@ nav {
     gap: 1vw;
     padding: 2vh 0;
     font-size: 18px;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 .logo {
@@ -67,6 +68,7 @@ nav {
     gap: 1vw;
     padding: 2vh 0;
     font-size: 18px;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 /* ----------------------------------------------------------- */
@@ -89,6 +91,7 @@ nav {
     height: 3px;
     background: white;
     transition: 0.3s;
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 /* Mobile menu panel */
@@ -110,6 +113,7 @@ nav {
     font-size: 20px;
     text-decoration: none;
     text-align: center;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 .mobile-menu.open {
@@ -151,14 +155,17 @@ nav {
 /* Burger animation when active */
 .burger.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 .burger.active span:nth-child(2) {
     opacity: 0;
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 .burger.active span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 
@@ -171,7 +178,7 @@ nav {
     align-items: center;      /* <-- vertically center images */
     gap: 8vw;
     overflow-x: auto;
-    padding: 6vh 35vw 6vh 30vw;
+    padding: 6vh 50vw 6vh 30vw;
     scroll-snap-type: x mandatory;
 }
 
@@ -231,11 +238,11 @@ nav {
 
     .scroll-container {
         gap: 12vw;
-        padding: 4vh 4vw;
+        padding: 4vh 30vw 4vh 30vw;
     }
 
     .image-container-landscape img {
-        width: 90vw;
+        width: 80vw;
     }
 
     .image-container-portrait img {
@@ -259,6 +266,7 @@ nav {
     margin-bottom: 10px;
     margin: 0 auto;
     bottom: 0;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 /* ----------------------------------------------------------- */

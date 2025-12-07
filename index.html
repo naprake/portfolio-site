@@ -44,12 +44,12 @@
             </ul>
 
             <div class="logo">
-                <a href="">Anakin de Wet</a>
+                <a href="#">Anakin de Wet</a>
             </div>
 
             <ul class="links">
-                <li class="links-item"><a href="">Instagram</a></li>
-                <li class="links-item"><a href="">Contact</a></li>
+                <li class="links-item"><a href="https://www.instagram.com/ani.dew/" target="_blank">Instagram</a></li>
+                <li class="links-item"><a href="mailto:anakindewet@yahoo.de">Contact</a></li>
             </ul>
 
             <!-- BURGER BUTTON -->
@@ -62,10 +62,10 @@
 
         <!-- MOBILE MENU (hidden by default) -->
         <div class="mobile-menu" id="mobileMenu">
-            <a href="">Recent Works</a>
+            <a href="#">Recent Works</a>
             <a href="">About</a>
-            <a href="">Instagram</a>
-            <a href="">Contact</a>
+            <a href="https://www.instagram.com/ani.dew/" target="_blank">Instagram</a>
+            <a href="mailto:anakindewet@yahoo.de">Contact</a>
         </div>
     </header>
 
@@ -108,28 +108,33 @@
         });
 
         /* ----------------------------------------------------------- */
-        /* IMAGE ENLARGE ON CENTER VIEW                                */
+        /* CROSS-BROWSER CENTER DETECTION (NO ROOT, NO THRESHOLD BUGS) */
         /* ----------------------------------------------------------- */
 
-        const containers = document.querySelectorAll(".image-container-landscape, .image-container-portrait");
+        function updateInView() {
+            const centerX = window.innerWidth / 2;
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("in-view");
-                    } else {
-                        entry.target.classList.remove("in-view");
-                    }
-                });
-            },
-            {
-                root: document.querySelector(".scroll-container"),
-                threshold: 0.9   // more than half visible = active
-            }
-        );
+            document.querySelectorAll(".image-container-landscape, .image-container-portrait").forEach(container => {
+                const rect = container.getBoundingClientRect();
+                const imageCenter = rect.left + rect.width / 2;
 
-        containers.forEach(c => observer.observe(c));
+                const distance = Math.abs(centerX - imageCenter);
+
+                // smaller distance = closer to center
+                if (distance < rect.width * 0.5) {
+                    container.classList.add("in-view");
+                } else {
+                    container.classList.remove("in-view");
+                }
+            });
+        }
+
+        document.querySelector(".scroll-container").addEventListener("scroll", updateInView);
+        window.addEventListener("resize", updateInView);
+
+        // Run once on load
+        updateInView();
+
 
 
         /* ----------------------------------------------------------- */
@@ -150,6 +155,21 @@
         lightbox.addEventListener("click", () => {
             lightbox.classList.remove("open");
         });
+
+        /* ----------------------------------------------------------- */
+        /* VERTICAL SCROLL → HORIZONTAL SCROLL FOR GALLERY             */
+        /* ----------------------------------------------------------- */
+
+        const scroller = document.querySelector(".scroll-container");
+
+        scroller.addEventListener("wheel", (e) => {
+            // Only activate if vertical scroll exists
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                e.preventDefault();
+                scroller.scrollLeft += e.deltaY * 1.4;  // multiplier = speed
+            }
+        }, { passive: false });
+
     </script>
 
 </body>
