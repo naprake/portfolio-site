@@ -9,12 +9,15 @@
     scroll-behavior: smooth;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: #000;
     color: #fff;
     font-family: "Tilt Neon", sans-serif;
     align-items: center;
-    height: 100vh;
 }
 
 /* FOOTER */

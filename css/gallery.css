@@ -11,10 +11,6 @@
     scroll-snap-type: x mandatory;
 }
 
-.scroll-container::-webkit-scrollbar {
-    display: none;
-}
-
 .image-container-portrait,
 .image-container-landscape {
     flex-shrink: 0;
