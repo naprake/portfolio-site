@@ -13,6 +13,8 @@ body {
     background-color: #000;
     color: #fff;
     font-family: "Tilt Neon", sans-serif;
+    align-items: center;
+    height: 100vh;
 }
 
 header {
@@ -45,6 +47,7 @@ nav {
     list-style: none;
     gap: 1vw;
     padding: 2vh 0;
+    font-size: 18px;
 }
 
 .logo {
@@ -63,6 +66,7 @@ nav {
     list-style: none;
     gap: 1vw;
     padding: 2vh 0;
+    font-size: 18px;
 }
 
 /* ----------------------------------------------------------- */
@@ -103,7 +107,7 @@ nav {
 
 .mobile-menu a {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
     text-align: center;
 }
@@ -188,18 +192,27 @@ nav {
 /* Landscape images */
 .image-container-landscape img {
     width: 50vw;
-    height: auto;
 }
 
 /* Portrait images */
 .image-container-portrait img {
     width: 30vw;
-    height: auto;
 }
 
 /* ----------------------------------------------------------- */
 /* RESPONSIVE BREAKPOINTS                                      */
 /* ----------------------------------------------------------- */
+@media (min-width: 1280px) {
+
+    .image-container-landscape img {
+        width: 45vw;
+    }
+
+    .image-container-portrait img {
+        width: 25vw;
+    }
+}
+
 
 @media (max-width: 900px) {
 
@@ -234,10 +247,15 @@ nav {
 
 .footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 500px;
+    padding: 10px;
     font-size: 12px;
     position: sticky;
+    background-color: #000;
+    color: #fff;
+    border-radius: 100pt;
+    width: fit-content;
+    margin-bottom: 10px;
+    margin: 0 auto;
     bottom: 0;
 }
 
