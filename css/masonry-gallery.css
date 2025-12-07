@@ -1,26 +1,22 @@
-.masonry { /* Masonry container */
-    -webkit-column-count: 4;
-    -moz-column-count:4;
+.masonry {
+    display: masonry;
     column-count: 4;
-    -webkit-column-gap: 1vw;
-    -moz-column-gap: 1vw;
-    column-gap: 1vw;
-    margin: 1.5vw;
-    padding: 0;
-    -moz-column-gap: 1.5vw;
-    -webkit-column-gap: 1.5vw;
     column-gap: 1.5vw;
+    margin: 1.5vw;
 }
+
 .masonry-item {
     display: inline-block;
-    width: auto;
-    transition: 1s ease all;
-    -webkit-transition: 1s ease all;
-    margin-bottom: 1vw;
+    width: 100%;
+    margin-bottom: 1.5vw;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .masonry-item img {
-    max-width:100%;
+    width: 99%;
+    display: block;
 }
 
 .masonry-item h3 {
@@ -33,30 +29,24 @@
 
 @media (max-width: 320px) {
     .masonry {
-        -moz-column-count: 1;
-        -webkit-column-count: 1;
         column-count: 1;
     }
 }
 
 @media (min-width: 321px) and (max-width: 768px){
     .masonry {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
         column-count: 2;
     }
 }
+
 @media (min-width: 769px) and (max-width: 1200px){
     .masonry {
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
         column-count: 3;
     }
 }
+
 @media (min-width: 1201px) {
     .masonry {
-        -moz-column-count: 4;
-        -webkit-column-count: 4;
         column-count: 4;
     }
 }
