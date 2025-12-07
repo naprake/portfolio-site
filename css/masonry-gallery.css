@@ -13,13 +13,15 @@
 }
 .masonry-item {
     display: inline-block;
-    width: 100%;
+    width: auto;
     transition: 1s ease all;
     -webkit-transition: 1s ease all;
     margin-bottom: 1vw;
 }
 
-.masonry-item img{max-width:100%;}
+.masonry-item img {
+    max-width:100%;
+}
 
 .masonry-item h3 {
     font-family: "Google Sans Code";
