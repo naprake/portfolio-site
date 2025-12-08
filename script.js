@@ -82,21 +82,4 @@ console.log("JS loaded");
     }, { passive: false });
 })();
 
-function forceMasonryReflow() {
-    const masonry = document.querySelector('.masonry');
-    if (!masonry) return;
-
-    masonry.style.display = 'none';
-    void masonry.offsetHeight;  // triggers reflow
-    masonry.style.display = '';
-}
-
-// Run on load, resize, and image clicks
-window.addEventListener('load', forceMasonryReflow);
-window.addEventListener('resize', forceMasonryReflow);
-
-document.querySelectorAll('.masonry-item img').forEach(img => {
-    img.addEventListener('load', forceMasonryReflow);
-    img.addEventListener('click', forceMasonryReflow);
-});
 
