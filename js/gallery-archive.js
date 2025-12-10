@@ -21,7 +21,8 @@
 
     function formatTitle(name) {
         return name
-            .replace(/\.[^/.]+$/, "")     // remove extension
+            .replace(/^Anakin de Wet - /i, "")   // remove prefix
+            .replace(/\.[^/.]+$/, "")            // remove extension
             .replace(/[-_]/g, " ")        // hyphens → spaces
             .replace(/\b\w/g, c => c.toUpperCase()); // capitalize
     }
