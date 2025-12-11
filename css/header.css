@@ -37,7 +37,7 @@ nav {
 }
 
 .menu a {
-    background-color: #131310;
+    background-color: rgb(19, 19, 16, 0.9);
     padding: 10px 20px;
     border-radius: 100px;
     box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
@@ -71,7 +71,7 @@ nav {
 }
 
 .links a {
-    background-color: #131310;
+    background-color: rgb(19, 19, 16, 0.9);
     padding: 10px 20px;
     border-radius: 100px;
     box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
