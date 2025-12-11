@@ -62,7 +62,7 @@
 @media (max-width: 600px) {
     .scroll-container {
         gap: 12vw;
-        padding: 4vh 8vw;
+        padding: 6vh 8vw;
     }
 
     .image-container-landscape img { width: 80vw; }
