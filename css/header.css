@@ -86,7 +86,7 @@ nav {
     display: none;
     flex-direction: column;
     gap: 6px;
-    background-color: #131310;
+    background-color: rgb(19, 19, 16, 0.9);
     border: none;
     cursor: pointer;
     padding: 18px 15px;
@@ -106,7 +106,7 @@ nav {
 .mobile-menu {
     display: none;
     flex-direction: column;
-    background: #10100E;
+    background: rgb(19, 19, 16, 0.9);
     padding: 20px;
     gap: 20px;
     position: absolute;
