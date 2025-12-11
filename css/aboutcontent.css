@@ -13,15 +13,14 @@
     justify-content: center;
     align-items: center;
     align-self: center;
-    border-radius: 16px;
-    border: solid 3px;
-    box-shadow: 0 0 4px #fff, 0 0 8px #fff;
-    box-shadow: inset 0 0 8px #fff, 0 0 12px #fff;
+    border-radius: 20px;
+    border: solid 1px;
+    color: #FFFFE6;
 }
 
 .portrait-border img {
     height: 100%;
     align-self: center;
     border-radius: 20px;
-    padding: 4%;
+    padding: 8px;
 }
