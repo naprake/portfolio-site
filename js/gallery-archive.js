@@ -19,11 +19,11 @@
         return res.json();
     }
 
-    function formatTitle(name) {
+    function cleanArchiveImageTitle(name) {
         return name
             .replace(/^Anakin de Wet - /i, "")   // remove prefix
             .replace(/\.[^/.]+$/, "")            // remove extension
-            .replace(/[-_]/g, " ")        // hyphens → spaces
+            .replace(/[-_]/g, " ")               // hyphens → spaces
             .replace(/\b\w/g, c => c.toUpperCase()); // capitalize
     }
 
@@ -50,10 +50,12 @@
 
     async function initArchive() {
         const files = await fetchImageList();
-        const images = files.filter(f => f.type === "file" && /\.(jpg|jpeg|png|gif|webp)$/i.test(f.name));
+        const images = files.filter(f =>
+            f.type === "file" && /\.(jpg|jpeg|png|gif|webp)$/i.test(f.name)
+        );
 
         images.forEach(file => {
-            const title = formatTitle(file.name);
+            const title = cleanArchiveImageTitle(file.name);
             const item = createMasonryItem(file.download_url, title);
             container.appendChild(item);
         });
