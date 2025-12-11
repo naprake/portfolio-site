@@ -24,11 +24,13 @@
 .image-container-landscape img {
     width: 50vw;
     border-radius: 4px;
+    box-shadow: 0 3px 15px #000;
 }
 
 .image-container-portrait img {
     width: 30vw;
     border-radius: 4px;
+    box-shadow: 0 3px 15px #000;
 }
 
 /* Enlarged center image effect */

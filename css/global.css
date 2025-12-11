@@ -14,26 +14,25 @@
 }
 
 body {
-    background-color: #000;
+    background-color: #10100E;
     color: #fff;
-    font-family: "Tilt Neon", sans-serif;
+    font-family: "Google Sans Code", monotype;
     align-items: center;
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 15px;
-    font-size: 12px;
+    padding: 10px;
+    font-size: 11px;
     position: sticky;
-    background-color: #000;
+    background-color: rgb(19, 19, 16, 0.8);
     color: #fff;
     border-radius: 100pt;
     width: fit-content;
     margin: 0 auto;
     margin-top: 70px;
     bottom: 1vh;
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
-    box-shadow: 0 3px 10px #000;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
 }
 

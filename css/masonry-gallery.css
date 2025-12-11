@@ -26,11 +26,12 @@
 .masonry-item img {
     width: 99%;
     display: block;
+    border-radius: 2px;
 }
 
 .masonry-item h3 {
     font-family: "Google Sans Code";
-    font-size: 16px;
+    font-size: 11px;
     font-weight: 400;
     padding: 0.5vw;
     color: #b3b3b3;

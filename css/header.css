@@ -3,7 +3,7 @@
 /* ----------------------------------------------------------- */
 
 header {
-    background: transparent;
+    background: linear-gradient(rgb(16, 16, 14), rgb(16, 16, 14, 0.5), rgb(16, 16, 14, 0.15), transparent);
     position: sticky;
     top: 0;
     width: 100%;
@@ -24,6 +24,7 @@ nav {
     align-items: center;
     width: 90%;
     margin: 0 auto;
+    font-size: 14px;
 }
 
 /* Menu */
@@ -33,30 +34,29 @@ nav {
     list-style: none;
     gap: 2vw;
     padding: 2vh 0;
-    font-size: 18px;
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 .menu a {
-    background-color: black;
+    background-color: #131310;
     padding: 10px 20px;
     border-radius: 100px;
-    box-shadow: 0 3px 10px #000;   
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
 }
 
 /* Logo */
-.logo {
+.logo a {
     justify-self: center;
-    font-family: "Neonderthaw", cursive !important;
-    font-size: 64px;
+    font-family: "Lacquer", system-ui;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 400;
     overflow: visible;
-    white-space: nowrap;
     padding: 0;
-    text-shadow: 
+    /* text-shadow: 
         0 0 4px #fff, 0 0 6px #fff,
         0 0 8px red, 0 0 10px red,
         0 0 12px red, 0 0 14px red,
-        0 0 16px red;
+        0 0 16px red; */
 }
 
 /* Right links */
@@ -66,15 +66,13 @@ nav {
     list-style: none;
     gap: 2vw;
     padding: 2vh 0;
-    font-size: 18px;
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 .links a {
-    background-color: black;
+    background-color: #131310;
     padding: 10px 20px;
     border-radius: 100px;
-    box-shadow: 0 3px 10px #000;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
 }
 
 
@@ -86,28 +84,27 @@ nav {
     display: none;
     flex-direction: column;
     gap: 6px;
-    background-color: #000;
+    background-color: #131310;
     border: none;
     cursor: pointer;
     padding: 18px 15px;
     border-radius: 100px;
     z-index: 1100;
-    box-shadow: 0 3px 10px #000;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
 }
 
 .burger span {
-    width: 28px;
-    height: 3px;
+    width: 24px;
+    height: 2px;
     background: white;
     transition: 0.3s;
-    box-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 /* Mobile Menu */
 .mobile-menu {
     display: none;
     flex-direction: column;
-    background: black;
+    background: #10100E;
     padding: 20px;
     gap: 20px;
     position: absolute;
@@ -115,14 +112,14 @@ nav {
     width: 100%;
     left: 0;
     z-index: 900;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.3);
 }
 
 .mobile-menu a {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     text-align: center;
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff;
 }
 
 .mobile-menu.open {
@@ -152,13 +149,13 @@ nav {
     }
 
     .logo {
-        font-size: 64px;
+        font-size: 28px;
     }
 }
 
 @media (max-width: 600px) {
     .logo {
-        font-size: 48px;
+        font-size: 28px;
         margin-top: 1vh;
     }
 

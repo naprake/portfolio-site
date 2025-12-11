@@ -32,7 +32,7 @@
         item.className = "masonry-item";
 
         const link = document.createElement("a");
-        link.href = "#"; // optional: project links explained below
+        link.href = "#"; // project link
 
         const img = document.createElement("img");
         img.src = src;
