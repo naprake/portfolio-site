@@ -23,7 +23,7 @@
         return name
             .replace(/^Anakin de Wet - /i, "")   // remove prefix
             .replace(/\.[^/.]+$/, "")            // remove extension
-            .replace(/[-_]/g, " ")               // hyphens → spaces
+            .replace(/[_]/g, " ")               // hyphens → spaces
             .replace(/\b\w/g, c => c.toUpperCase()); // capitalize
     }
 
