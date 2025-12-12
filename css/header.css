@@ -3,7 +3,7 @@
 /* ----------------------------------------------------------- */
 
 header {
-    background: linear-gradient(rgb(16, 16, 14), rgb(16, 16, 14, 0.5), rgb(16, 16, 14, 0.15), transparent);
+    background: linear-gradient(hsl(60, 7%, 6%), hsla(60, 7%, 6%, 0.5), hsla(60, 7%, 6%, 0.15), transparent);
     position: sticky;
     top: 0;
     width: 100%;
@@ -37,10 +37,19 @@ nav {
 }
 
 .menu a {
-    background-color: rgb(19, 19, 16, 0.9);
+    background-color: hsl(60, 7%, 6%, 0.9);
+    border: solid 1px;
+    border-color: hsl(60, 7%, 16%);
     padding: 10px 20px;
     border-radius: 100px;
-    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+}
+
+.menu a:hover {
+    background-color: hsla(60, 7%, 11%, 0.9);
+}
+
+.menu #activesite {
+    background-color: hsla(60, 7%, 16%, 0.9);
 }
 
 /* Logo */
@@ -52,13 +61,19 @@ nav {
     font-weight: 400;
     overflow: visible;
     padding: 0;
-    color: #FFFFFF;
-    text-shadow: 0 3px 4px rgb(0, 0, 0, 0.2);
+    color: hsl(60, 100%, 98%);
+    text-shadow: 0 3px 4px hsla(0, 0%, 0%, 0.2);
+    border-radius: 100px;
+    transition: 1s ease all;
     /* text-shadow: 
         0 0 4px #fff, 0 0 6px #fff,
         0 0 8px red, 0 0 10px red,
         0 0 12px red, 0 0 14px red,
         0 0 16px red; */
+}
+
+.logo a:hover {
+    text-shadow: 1px 1px 1px hsl(0, 100%, 50%, 1);
 }
 
 /* Right links */
@@ -71,10 +86,15 @@ nav {
 }
 
 .links a {
-    background-color: rgb(19, 19, 16, 0.9);
+    background-color: hsl(60, 7%, 6%, 0.9);
+    border: solid 1px;
+    border-color: hsl(60, 7%, 16%);
     padding: 10px 20px;
     border-radius: 100px;
-    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+}
+
+.links a:hover {
+    background-color: hsla(60, 7%, 11%, 0.9);
 }
 
 
@@ -86,19 +106,20 @@ nav {
     display: none;
     flex-direction: column;
     gap: 6px;
-    background-color: rgb(19, 19, 16, 0.9);
+    background-color: hsla(60, 7%, 6%, 0.9);
     border: none;
     cursor: pointer;
     padding: 18px 15px;
     border-radius: 100px;
+    border: solid 1px;
+    border-color: hsl(60, 7%, 16%);
     z-index: 1100;
-    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
 }
 
 .burger span {
     width: 24px;
     height: 2px;
-    background: white;
+    background: hsl(60, 100%, 95%);
     transition: 0.3s;
 }
 
@@ -106,22 +127,26 @@ nav {
 .mobile-menu {
     display: none;
     flex-direction: column;
-    background: rgb(19, 19, 16, 0.9);
+    width: 100%;
     padding: 20px;
     gap: 20px;
     position: absolute;
     top: 100%;
-    width: 100%;
     left: 0;
     z-index: 900;
-    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.3);
 }
 
 .mobile-menu a {
-    color: white;
+    color: hsl(60, 100%, 95%);
     font-size: 16px;
     text-decoration: none;
     text-align: center;
+    background-color: hsl(60, 7%, 6%, 0.95);
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: solid 1px;
+    border-color: hsl(60, 7%, 16%);
+    margin: 0 30vw;
 }
 
 .mobile-menu.open {
@@ -143,6 +168,7 @@ nav {
     .burger {
         display: flex;
         justify-self: end;
+        margin-top: 1vh;
     }
 
     .nav {

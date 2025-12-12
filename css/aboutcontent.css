@@ -15,7 +15,8 @@
     align-self: center;
     border-radius: 20px;
     border: solid 1px;
-    color: #FFFFE6;
+    border-color:  hsl(60, 7%, 16%);
+    background-color: hsl(60, 7%, 11%);
 }
 
 .portrait-border img {

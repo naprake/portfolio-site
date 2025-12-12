@@ -1,9 +1,5 @@
 console.log("JS loaded");
 
-/* =======================================================================
-   MOBILE MENU (unchanged)
-   Keeps burger/menu functionality isolated and safe
-======================================================================= */
 (() => {
     const burger = document.getElementById("burger");
     const mobileMenu = document.getElementById("mobileMenu");

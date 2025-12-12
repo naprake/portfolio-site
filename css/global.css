@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: #10100E;
+    background-color: hsl(60, 7%, 6%);
     color: #fff;
     font-family: "Google Sans Code", monotype;
     align-items: center;
@@ -26,13 +26,12 @@ body {
     padding: 8px;
     font-size: 10px;
     position: sticky;
-    background-color: rgb(19, 19, 16, 0.8);
-    color: #fff;
+    background-color: hsla(60, 7%, 6%, 0.8);
+    color: hsl(60, 100%, 95%);
     border-radius: 100pt;
     width: fit-content;
     margin: 0 auto;
     margin-top: 70px;
     bottom: 1vh;
-    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
 }
 
