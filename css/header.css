@@ -25,6 +25,7 @@ nav {
     width: 90%;
     margin: 0 auto;
     font-size: 14px;
+    animation: BlurEffect 0.5s forwards ease-in;
 }
 
 /* Menu */
@@ -65,11 +66,6 @@ nav {
     text-shadow: 0 3px 4px hsla(0, 0%, 0%, 0.2);
     border-radius: 100px;
     transition: 1s ease all;
-    /* text-shadow: 
-        0 0 4px #fff, 0 0 6px #fff,
-        0 0 8px red, 0 0 10px red,
-        0 0 12px red, 0 0 14px red,
-        0 0 16px red; */
 }
 
 .logo a:hover {

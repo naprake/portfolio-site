@@ -38,6 +38,7 @@
 .image-container-landscape img {
     transition: transform 0.5s ease;
     transform: scale(0.9);
+    animation: BlurEffect 0.5s forwards ease-in;
 }
 
 .in-view img {
