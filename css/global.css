@@ -35,3 +35,11 @@ body {
     bottom: 1vh;
 }
 
+@keyframes BlurEffect {
+    from {
+        filter: blur(10px);
+    }
+    to {
+        filter: blur(0px);
+    }
+}

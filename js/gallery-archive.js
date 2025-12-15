@@ -51,7 +51,7 @@
     async function initArchive() {
         const files = await fetchImageList();
         const images = files.filter(f =>
-            f.type === "file" && /\.(jpg|jpeg|png|gif|webp)$/i.test(f.name)
+            f.type === "file" && /\.(jpg|jpeg|png|gif|webp|avif)$/i.test(f.name)
         );
 
         images.forEach(file => {

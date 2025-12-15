@@ -27,6 +27,7 @@
     width: 99%;
     display: block;
     border-radius: 4px;
+    animation: BlurEffect 0.5s forwards ease-in;
 }
 
 .masonry-item h3 {
@@ -34,7 +35,8 @@
     font-size: 11px;
     font-weight: 400;
     padding: 0.5vw;
-    color: hsl(60, 7%, 70%)
+    color: hsl(60, 7%, 70%);
+    animation: BlurEffect 0.5s forwards ease-in;
 }
 
 @media (max-width: 320px) {

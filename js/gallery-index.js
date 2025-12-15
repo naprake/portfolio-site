@@ -37,7 +37,7 @@ console.log("JS loaded");
     async function loadAllImages() {
         try {
             const files = await fetchImageList();
-            const imageFiles = files.filter(f => f.type === "file" && /\.(jpg|jpeg|png|gif|webp)$/i.test(f.name));
+            const imageFiles = files.filter(f => f.type === "file" && /\.(jpg|jpeg|png|gif|webp|avif)$/i.test(f.name));
 
             // Create image promises
             const imagePromises = imageFiles.map(f => createImageElement(f).then(img => ({ img, name: f.name })));

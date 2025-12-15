@@ -5,6 +5,7 @@
     width: 100%;
     display: flex;
     margin-top: 3%;
+    animation: BlurEffect 0.5s forwards ease-in;
 }
 
 .portrait-border {
