@@ -19,10 +19,11 @@
 /* ----------------------------------------------------------- */
 
 .background {
+    position: fixed;
     background-image: url("../assets/Licht-36.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    height: 100vh;
     height: 100dvh;
     width: 100vw;
     scroll-snap-align: start;
@@ -36,12 +37,17 @@
 /* CONTACT CARD                                                */
 /* ----------------------------------------------------------- */
 
+.spacer {
+    height: 100vh;
+    height: 100dvh;
+}
 
 .main {
     background-image: url("../assets/Licht-36-SV.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    height: 50vh;
     height: 50dvh;
     width: 100vw;
     scroll-snap-align: start;
