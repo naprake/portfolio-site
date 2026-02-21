@@ -1,0 +1,180 @@
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 3.125%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "textname plus nav";
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* ----------------------------------------------------------- */
+/* BACKGROUND                                                  */
+/* ----------------------------------------------------------- */
+
+.background {
+    background-image: url("../assets/Licht-36.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    opacity: 0.1;
+    filter: blur(5px);
+    background-position: center 45%;
+    overflow: hidden;
+}
+
+/* ----------------------------------------------------------- */
+/* CONTACT CARD                                                */
+/* ----------------------------------------------------------- */
+
+
+.main {
+    background-image: url("../assets/Licht-36-SV.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    background-position: 50% 60%;
+    bottom: 0;
+    position: relative;
+}
+
+
+
+.underside {
+    height: 50vh;
+    width: 100vw;
+}
+
+
+
+.underside-text {
+    width: 100vw;
+    height: 50vh;
+    padding: 3.125%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "getin con";
+    gap: 10px;
+    z-index: 500;
+}
+
+.starmobile {
+    display: none;
+    font-family: "HealTheWebB", serif;
+    font-size: 1rem;
+    line-height: 2;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .underside-text {
+        grid-template-rows: 1fr;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        "star con";
+        overflow: hidden;
+    }
+    .getin {
+        display: none;
+    }
+    .contactbuttons {
+        grid-area: con;
+        justify-self: end;
+        align-self: end;
+        margin-top: auto;
+        width: fit-content;
+        text-align: right;
+    }
+    .starmobile {
+        display: block;
+        grid-area: star;
+        justify-self: start;
+        align-self: end;
+        margin-top: auto;
+        width: fit-content;
+        text-align: left;
+    }
+}
+
+
+
+.getin {
+    grid-area: getin;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+
+
+.contactbuttons {
+    grid-area: con;
+    align-self: start;
+    justify-self: end;
+    text-align: right;
+}
+
+.contactbuttons li {
+    transition: all 0.2s ease-out;
+}
+
+.contactbuttons li:hover,
+.contactbuttons li:focus {
+    padding-right: 10px;
+}
+
+.contactbuttons li a {
+    font-size: 1.4rem;
+    line-height: 2.1;
+}
+
+.contactbuttons li a:hover,
+.contactbuttons li a:focus {
+    color: #fff;
+}
+
+.contactbuttons li a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.contactbuttons li a::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    background-color: #ff0000;
+    transition: all 0.2s ease-in-out;
+}
+
+.contactbuttons li a:hover::after,
+.contactbuttons li a:focus::after {
+    width: 100%;
+    transition-delay: 0.2s;
+}
+
+.contactbuttons li a:hover::before,
+.contactbuttons li a:focus::before {
+    width: 100%;
+}

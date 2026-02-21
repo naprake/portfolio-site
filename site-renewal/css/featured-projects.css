@@ -1,0 +1,117 @@
+.sticky-header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 3.125%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "textname plus nav";
+    gap: 10px;
+    z-index: 1000;
+}
+
+.projectlist {
+    width: 100%;
+    padding: 4.125%;
+}
+
+.projectlist-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "left right";
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 35px 0;
+    border-bottom: solid 1px #ff0000;
+    cursor: pointer;
+    animation-delay: 3.0s;
+    opacity: 0;
+}
+
+.projectlist-items:first-of-type {
+    border-top: solid 1px #ff0000;
+}
+
+.projectlist-items img {
+    grid-area: right;
+    align-self: flex-start;
+    justify-self: flex-end;
+    max-height: 100%;
+    max-width: 100%;
+    filter: grayscale(1) !important;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    animation-delay: 3.8s;
+    opacity: 0;
+}
+
+.projectlist-items:hover img {
+    filter: grayscale(0) !important;
+}
+
+.projectlist-items:hover {
+    color: #fff;
+}
+
+.project-details ul li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.project-details {
+    grid-area: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "title cat cat";
+}
+
+.project-details-title {
+    grid-area: title;
+    align-self: flex-start;
+    justify-self: flex-start;
+    animation-delay: 3.1s;
+    opacity: 0;
+}
+
+.project-details-cat {
+    grid-area: cat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "cat1 det1"
+    "cat2 det2"
+    "cat3 det3";
+}
+
+.project-details ul li:nth-child(1),
+.project-details ul li:nth-child(2),
+.project-details ul li:nth-child(3) {
+    opacity: 0.75;
+}
+
+.project-details ul li:nth-child(1) {
+    grid-area: cat1;
+}
+
+.project-details ul li:nth-child(2) {
+    grid-area: cat2;
+}
+.project-details ul li:nth-child(3) {
+    grid-area: cat3;
+}
+
+.scrollgradient {
+    content: ' ';
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2), rgba(0,0,0,0));
+    z-index: 10000;
+}

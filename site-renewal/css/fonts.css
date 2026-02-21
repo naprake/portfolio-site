@@ -1,0 +1,92 @@
+/* ----------------------------------------------------------- */
+/* FONT PRESETS                                                */
+/* ----------------------------------------------------------- */
+
+@font-face{
+font-family: HealTheWebB;
+src: url('fonts/HealTheWebB-Regular.woff') format('woff'), url('fonts/HealTheWebB-Regular.woff2') format('woff2');
+font-display: swap;
+}
+
+@font-face{
+font-family: HealTheWebA;
+src: url('fonts/HealTheWebA-Regular.woff') format('woff'), url('fonts/HealTheWebA-Regular.woff2') format('woff2');
+font-display: swap;
+}
+
+@font-face{
+font-family: Apfel Grotezk Regular;
+src: url('fonts/ApfelGrotezk-Regular.woff') format('woff'), url('fonts/ApfelGrotezk-Regular.woff2') format('woff2');
+font-display: swap;
+}
+
+small {
+    font-family: "Inter", system-ui;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+h3 {
+    font-family: "HealTheWebB", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.15;
+    letter-spacing: -0.022rem;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+h1 {
+    font-family: "HealTheWebB", sans-serif;
+    font-size: 3.815rem;
+    font-weight: normal;
+    line-height: 1.15;
+    letter-spacing: -0.022rem;
+}
+
+h1 span {
+    font-family: "HealTheWebA", serif;
+}
+
+a {
+    position: relative;
+    font-family: "HealTheWebA", sans-serif;
+    font-weight: normal;
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+    h2 {
+        font-size: 1.953rem;
+    }
+    h3 {
+        font-size: 1.563rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    a {
+        font-size: 1rem;
+    }
+}

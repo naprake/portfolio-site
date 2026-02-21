@@ -1,0 +1,83 @@
+/* ----------------------------------------------------------- */
+/* LOADER OTHERS                                               */
+/* ----------------------------------------------------------- */
+
+#loadercontainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideAway 0.5s ease-in forwards;
+    animation-delay: 1s;
+    z-index: 9999;
+}
+
+#loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+@keyframes slideAway {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+}
+
+.rotatestar {
+    overflow: hidden;
+    animation: rotatePlus 3s linear infinite;
+    font-size: 1.5rem;
+}
+
+@keyframes rotatePlus {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ----------------------------------------------------------- */
+/* OTHER HEADER DELAYS                                         */
+/* ----------------------------------------------------------- */
+
+
+.header-text h1:nth-child(1) {
+    animation-delay: 1.4s;
+}
+
+.header-text h1:nth-child(2) {
+    animation-delay: 1.6s;
+}
+
+
+.nav li:nth-child(1) {
+    animation-delay: 2.0s;
+}
+
+.nav li:nth-child(2) {
+    animation-delay: 2.2s;
+}
+
+.nav li:nth-child(3) {
+    animation-delay: 2.4s;
+}
+
+
+.starcontainer {
+    animation-delay: 2.6s;
+}

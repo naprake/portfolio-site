@@ -1,0 +1,359 @@
+/* ----------------------------------------------------------- */
+/* GLOBAL STYLES                                               */
+/* ----------------------------------------------------------- */
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+*::selection {
+  background: #fff;
+  opacity: 1;
+  color: #000;
+}
+*::-moz-selection {
+  background: #fff;
+  opacity: 1;
+  color: #000;
+}
+*::-webkit-selection {
+  background: #fff;
+  opacity: 1;
+  color: #000;
+}
+
+body {
+    color: #ff0000;
+    background-color: #000;
+    align-items: center;
+    background-size: cover;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* ----------------------------------------------------------- */
+/* HEADER + NAVIGATION                                         */
+/* ----------------------------------------------------------- */
+
+
+@media (max-width: 768px) {
+    .sticky-header {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        "textname nav";
+    }
+    .starcontainer {
+        display: none;
+    }
+}
+
+.header-text {
+    grid-area: textname;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.header-text h1 {
+    opacity: 0;
+}
+
+
+.nav {
+    grid-area: nav;
+    align-self: flex-start;
+    justify-self: flex-end;
+    text-align: right;
+}
+
+.nav li {
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
+.nav li:hover {
+    padding-right: 10px;
+}
+
+.nav li a {
+    font-size: 1.4rem;
+    line-height: 2.1;
+}
+
+.nav li a:hover,
+.nav li a:focus {
+    color: #fff;
+}
+
+.nav li a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav li a::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    background-color: #ff0000;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav li a:hover::after,
+.nav li a:focus::after {
+    width: 100%;
+    transition-delay: 0.2s;
+}
+
+.nav li a:hover::before,
+.nav li a:focus::before {
+    width: 100%;
+}
+
+
+.starcontainer {
+    opacity: 0;
+    grid-area: plus;
+    align-self: flex-start;
+    justify-self: center;
+}
+
+.starcontainer p {
+    transition: all 0.5s ease-in-out;
+}
+
+.starcontainer p:hover {
+    transform: rotate(360deg);
+}
+
+.starcontainer p a {
+    font-size: 1rem;
+}
+
+.starcontainer p a:hover {
+    color: #fff;
+}
+
+
+/* ----------------------------------------------------------- */
+/* ANIMATIONS                                                  */
+/* ----------------------------------------------------------- */
+
+.animation-slideInRight {
+    animation-name: slideInRight;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-direction: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        filter: blur(2.5px);
+        transform: translateX(20px);
+    }
+    55% {
+        opacity: 1;
+        filter: none;
+        transform: translateX(-5px);
+    }
+    100% {
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+    }
+}
+
+.animation-slideInLeft {
+    animation-name: slideInLeft;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-direction: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        filter: blur(2.5px);
+        transform: translateX(-20px);
+    }
+    55% {
+        opacity: 1;
+        filter: none;
+        transform: translateX(5px);
+    }
+    100% {
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+    }
+}
+
+.animation-slideInBottom {
+    animation-name: slideInBottom;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-direction: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        filter: blur(2.5px);
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        filter: none;
+        transform: translateY(0);
+    }
+}
+
+.animation-slideInTop {
+    animation-name: slideInTop;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-direction: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        filter: blur(2.5px);
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        filter: none;
+        transform: translateY(0);
+    }
+}
+
+
+.animation-slideInBottomBackground {
+    animation-name: slideInBottomBackground;
+    animation-duration: 2.7s;
+    animation-timing-function: ease-out;
+    animation-direction: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInBottomBackground {
+    from {
+        opacity: 0.1;
+        filter: blur(5px);
+        background-position: center 45%;
+    }
+    to {
+        opacity: 1;
+        filter: none;
+        background-position: center 60%;
+    }
+}
+
+/* ----------------------------------------------------------- */
+/* FOOTER                                                      */
+/* ----------------------------------------------------------- */
+
+.footerwrapper {
+    width: 100%;
+    height: 50vh;
+    padding: 3.125%;
+}
+
+.footercontainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "contitle contact";
+    gap: 10px;
+}
+
+.footertitle {
+    grid-area: contitle;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+
+.footercontact {
+    grid-area: contact;
+    align-self: flex-start;
+    justify-self: flex-end;
+    text-align: right;
+}
+
+.footercontact li:hover,
+.footercontact li:focus {
+    padding-right: 10px;
+}
+
+.footercontact li a {
+    font-size: 1.4rem;
+    line-height: 2.1;
+}
+
+.footercontact li a:hover,
+.footercontact li a:focus {
+    color: #fff;
+}
+
+.footercontact li a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.footercontact li a::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    background-color: #ff0000;
+    transition: all 0.2s ease-in-out;
+}
+
+.footercontact li a:hover::after,
+.footercontact li a:focus::after {
+    width: 100%;
+    transition-delay: 0.2s;
+}
+
+.footercontact li a:hover::before,
+.footercontact li a:focus::before {
+    width: 100%;
+}
