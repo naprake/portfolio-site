@@ -12,7 +12,7 @@ header {
 
 header a {
     text-decoration: none;
-    color: #FFFFE6;
+    color: hsl(60, 100%, 95%);
     display: flex;
     align-items: center;
     justify-content: center;
