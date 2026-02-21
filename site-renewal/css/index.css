@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     scroll-snap-align: start;
     opacity: 0.1;
@@ -42,7 +42,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 50vh;
+    height: 50dvh;
     width: 100vw;
     scroll-snap-align: start;
     background-position: 50% 60%;
