@@ -14,11 +14,24 @@
     z-index: 1000;
 }
 
+@media (max-width: 768px) {
+    .sticky-header {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        "textname nav";
+    }
+    .starcontainer {
+        display: none;
+    }
+}
+
 /* ----------------------------------------------------------- */
 /* BACKGROUND                                                  */
 /* ----------------------------------------------------------- */
 
-.background {
+body::before {
+    content: "";
     position: fixed;
     background-image: url("../assets/Licht-36.jpg");
     background-repeat: no-repeat;
@@ -26,11 +39,10 @@
     height: 100vh;
     height: 100dvh;
     width: 100vw;
-    scroll-snap-align: start;
-    opacity: 0.1;
-    filter: blur(5px);
+    filter: blur(0px);
     background-position: center 45%;
     overflow: hidden;
+    z-index: -1;
 }
 
 /* ----------------------------------------------------------- */
@@ -50,7 +62,6 @@
     height: 50vh;
     height: 50dvh;
     width: 100vw;
-    scroll-snap-align: start;
     background-position: 50% 60%;
     bottom: 0;
     position: relative;
