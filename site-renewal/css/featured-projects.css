@@ -1,17 +1,5 @@
 .sticky-header {
     position: static;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    padding: 3.125%;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "textname plus nav";
-    gap: 10px;
-    z-index: 1000;
 }
 
 .projectlist {
@@ -31,6 +19,16 @@
     cursor: pointer;
     animation-delay: 3.0s;
     opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .projectlist-items {
+        grid-template-columns: 1fr;
+    grid-template-areas: 
+    "left"
+    "right";
+    grid-template-rows: auto auto;
+    }
 }
 
 .projectlist-items:first-of-type {

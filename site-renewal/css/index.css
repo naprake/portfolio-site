@@ -1,29 +1,5 @@
 .sticky-header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    padding: 3.125%;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "textname plus nav";
-    gap: 10px;
-    z-index: 1000;
-}
-
-@media (max-width: 768px) {
-    .sticky-header {
-        grid-template-rows: auto;
-        grid-template-columns: auto auto;
-        grid-template-areas:
-        "textname nav";
-    }
-    .starcontainer {
-        display: none;
-    }
 }
 
 /* ----------------------------------------------------------- */
@@ -36,13 +12,11 @@ body::before {
     background-image: url("../assets/Licht-36.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center 45%;
+    z-index: -1;
     height: 100vh;
     height: 100dvh;
-    width: 100vw;
-    filter: blur(0px);
-    background-position: center 45%;
-    overflow: hidden;
-    z-index: -1;
+    width: 100%;
 }
 
 /* ----------------------------------------------------------- */
@@ -55,17 +29,32 @@ body::before {
 }
 
 .main {
-    background-image: url("../assets/Licht-36-SV.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     height: 50vh;
     height: 50dvh;
     width: 100vw;
-    background-position: 50% 60%;
-    bottom: 0;
-    position: relative;
+
+    position: relative;   /* REQUIRED */
+    overflow: hidden;     /* CRITICAL: clips the pseudo-element */
+
+    z-index: 1000;
 }
+
+.main::before {
+    content: "";
+    position: absolute;
+
+    inset: 0;             /* anchor to .main exactly */
+
+    background-image: url("../assets/Licht-36-Drawn.jpg");
+    background-repeat: no-repeat;
+
+    /* THIS must match the body background */
+    background-position: center 45%;
+    background-size: cover;
+
+    z-index: -1;
+}
+
 
 
 

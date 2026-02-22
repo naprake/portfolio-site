@@ -50,6 +50,32 @@ body {
 /* HEADER + NAVIGATION                                         */
 /* ----------------------------------------------------------- */
 
+.sticky-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 3.125%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "textname plus nav";
+    gap: 10px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .sticky-header {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+        "textname nav";
+    }
+    .starcontainer {
+        display: none;
+    }
+}
 
 .header-text {
     grid-area: textname;
@@ -323,4 +349,21 @@ body {
 .footercontact li a:hover::before,
 .footercontact li a:focus::before {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .footercontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "contitle"
+    "contact";
+    height: 100%;
+    }
+    .footercontact {
+    align-self: flex-end;
+    justify-self: flex-end;
+    text-align: right;
+    }
 }
