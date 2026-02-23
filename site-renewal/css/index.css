@@ -6,17 +6,20 @@
 /* BACKGROUND                                                  */
 /* ----------------------------------------------------------- */
 
-body::before {
+.spacer::before {
     content: "";
     position: fixed;
     background-image: url("../assets/Licht-36.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 45%;
-    z-index: -1;
+    background-position: center;
+    z-index: -100;
     height: 100vh;
-    height: 100dvh;
     width: 100%;
+}
+
+body {
+    min-height: 150vh;
 }
 
 /* ----------------------------------------------------------- */
@@ -25,35 +28,37 @@ body::before {
 
 .spacer {
     height: 100vh;
-    height: 100dvh;
 }
 
-.main {
+.contactwrapper {
+    overflow: hidden !important;
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+
+    clip-path: inset(0);
+    background-image: url("../assets/Licht-36-SV.svg");
+    background-repeat: no-repeat;
+
+    /* critical for alignment */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    z-index: -1;
+}
+
+.contact-items {
     height: 50vh;
     height: 50dvh;
     width: 100vw;
 
-    position: relative;   /* REQUIRED */
-    overflow: hidden;     /* CRITICAL: clips the pseudo-element */
+    position: relative;
 
     z-index: 1000;
 }
 
-.main::before {
-    content: "";
-    position: absolute;
-
-    inset: 0;             /* anchor to .main exactly */
-
-    background-image: url("../assets/Licht-36-Drawn.jpg");
-    background-repeat: no-repeat;
-
-    /* THIS must match the body background */
-    background-position: center 45%;
-    background-size: cover;
-
-    z-index: -1;
-}
 
 
 
