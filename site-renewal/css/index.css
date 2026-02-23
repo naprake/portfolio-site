@@ -41,7 +41,6 @@ body {
     background-image: url("../assets/Licht-36-SV.svg");
     background-repeat: no-repeat;
 
-    /* critical for alignment */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
