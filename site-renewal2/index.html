@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/loaderindex.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- THEME COLORS -->
+    <meta name="theme-color" content="#ff0000">
+    <meta name="theme-color" content="#ff0000" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#ff0000" media="(prefers-color-scheme: dark)">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" type="image/x-icon">
+    <link rel="favicon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/icons/favicon_32.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/icons/favicon_16.png">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- TITLE -->
+    <title>Anakin de Wet</title>
+    <meta name="description" content="Portfolio/Archive of Anakin de Wet">
+
+    <!-- OPEN GRAPH META TAGS -->
+    <meta property="og:image" content="assets/icons/apple-touch-icon.png">
+    <meta property="og:title" content="Anakin de Wet">
+    <meta property="og:description" content="Portfolio/Archive of Anakin de Wet">
+    <meta property="og:logo" content="assets/icons/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Anakin de Wet">
+
+    <link rel="canonical" href="https://anakindewet.com">
+    <meta name="description" content="Portfolio/Archive of Anakin de Wet. Communications Design Student at the HAW Hamburg">
+    <meta name="Keywords" content="Anakin, de Wet, de, Wet, Anakin de Wet, Crispin, Anakin Crispin, Crispin de, Crispin de Wet, Crispin We,
+    Anakin de, Anakin Wet, Anakin Crispin de Wet, Design, Kommunikationsdesign, HAW, Grafikdesign, Graphicdesign, Brand, Drawing, Painting, Works, 
+    Sketch, Art, Archive, Contact, About">
+</head>
+
+<body>
+
+<nav>
+    <div class="fixed">
+        <div class="navigation">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">ARCHIVE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <img id="name" src="assets/text-white.svg">
+    </div>
+</nav>
+
+<div class="hero">
+    <img id="image" src="assets/headshot.jpg">
+</div>
+
+
+<main>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
+</p>
+</main>
+
+
+<script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+<script>
+    // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+lenis.on('scroll', ({ scroll }) => {
+  const maxDistance = 200; // animation finishes after 200px
+
+  // progress between 0 and 1
+  const progress = Math.min(scroll / maxDistance, 1);
+
+  const blur = progress * 5;
+  const transform = progress * 350;
+
+  const img = document.querySelector('#name');
+  img.style.filter = `blur(${blur}px)`;
+  img.style.transform = `translateY(-${transform}px)`;
+});
+</script>
+
+</body>
+
+</html>
