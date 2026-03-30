@@ -39,6 +39,7 @@
     overflow: hidden;
     animation: rotatePlus 3s linear infinite;
     font-size: 1.5rem;
+    color: #f4f4f4;
 }
 
 @keyframes rotatePlus {

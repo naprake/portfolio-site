@@ -3,6 +3,10 @@
     padding: 4.125%;
 }
 
+.projectlist-items:last-child {
+    border-bottom: solid 1px #0b0b0b;
+}
+
 .projectlist-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -11,7 +15,7 @@
     grid-template-rows: auto;
     gap: 10px;
     padding: 35px 0;
-    border-top: solid 1px #0f0f0f;
+    border-top: solid 1px #0b0b0b;
     cursor: pointer;
     animation-delay: 3.0s;
     opacity: 0;
