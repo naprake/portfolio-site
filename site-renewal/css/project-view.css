@@ -3,29 +3,60 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "leftsplit rightsplit";
     align-items: start;
-    width: 100%;
+    width: 100vw;
+    max-width: 100vw;
     overflow: hidden;
 }
 
 .project-info {
     grid-area: leftsplit;
-    width: 50vw;
+    width: 50%;
     height: 100vh;
     top: 0;
-    position: sticky;
+    position: fixed;
 }
 
-.project-info h1,
-.project-info li {
+.project-info-list h1,
+.project-info-list ul {
     padding: 4.125vh 4.125vw 4.125vh 4.125vw;
+}
+
+.project-info-list ul li {
+    padding-bottom: 3vh;
 }
 
 .project-gallery {
     grid-area: rightsplit;
-    width: 50vw;
+    width: 100%;
 }
 
 .project-gallery img{
     min-width: 100%;
     max-width: 100%;
+    display: block;
+}
+
+.project-info-list ul li:nth-child(1) p,
+.project-info-list ul li:nth-child(2) p {
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .split {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "leftsplit" 
+        "rightsplit";
+        grid-template-rows: auto auto;
+    }
+    .project-info {
+        position: relative;
+        width: 100vw;
+        height: auto;
+    }
+    .project-gallery {
+        width: 100vw;
+    }
 }
