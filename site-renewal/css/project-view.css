@@ -1,0 +1,31 @@
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "leftsplit rightsplit";
+    align-items: start;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-info {
+    grid-area: leftsplit;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    position: sticky;
+}
+
+.project-info h1,
+.project-info li {
+    padding: 4.125vh 4.125vw 4.125vh 4.125vw;
+}
+
+.project-gallery {
+    grid-area: rightsplit;
+    width: 50vw;
+}
+
+.project-gallery img{
+    min-width: 100%;
+    max-width: 100%;
+}

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/loaderindex.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/slideshow.css">
 
     <!-- THEME COLORS -->
     <meta name="theme-color" content="#ff0000">
@@ -50,31 +50,53 @@
 
 <body>
 
-<nav>
-    <div class="fixed">
-        <div class="navigation">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">PROJECTS</a></li>
-                <li><a href="#">ARCHIVE</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </div>
-        <img id="name" src="assets/text-white.svg">
-    </div>
-</nav>
 
-<div class="hero">
-    <img id="image" src="assets/headshot.jpg">
+<div class="bg-slideshow">
+
+  <div class="slide" style="background-image:url('images/Image1.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image2.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image3.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image4.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image5.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image6.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image7.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image8.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image9.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image10.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image11.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image12.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image13.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image14.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image15.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image16.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image17.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image18.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image19.avif')"></div>
+  <div class="slide" style="background-image:url('images/Image20.avif')"></div>
+
 </div>
 
 
-<main>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-</p>
-</main>
 
+<div class="gradient-blur-right">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<div class="gradient-blur-left">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<div class="custom-cursor"></div>
 
 <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
 
@@ -95,13 +117,52 @@ lenis.on('scroll', ({ scroll }) => {
   // progress between 0 and 1
   const progress = Math.min(scroll / maxDistance, 1);
 
-  const blur = progress * 5;
+  // const blur = progress * 5;
   const transform = progress * 350;
 
   const img = document.querySelector('#name');
-  img.style.filter = `blur(${blur}px)`;
+  // img.style.filter = `blur(${blur}px)`;
   img.style.transform = `translateY(-${transform}px)`;
 });
+
+
+
+const cursor = document.querySelector(".custom-cursor");
+const links = document.querySelectorAll("a");
+let isCursorInited = false;
+
+const initCursor = () => {
+  cursor.classList.add("custom-cursor--init");
+  isCursorInited = true;
+};
+
+const destroyCursor = () => {
+  cursor.classList.remove("custom-cursor--init");
+  isCursorInited = false;
+};
+
+links.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    cursor.classList.add("custom-cursor--link");
+  });
+
+  link.addEventListener("mouseout", () => {
+    cursor.classList.remove("custom-cursor--link");
+  });
+});
+
+document.addEventListener("mousemove", (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  if (!isCursorInited) {
+    initCursor();
+  }
+
+  cursor.style = `translate: ${mouseX}px ${mouseY}px`;
+});
+
+document.addEventListener("mouseout", destroyCursor);
 </script>
 
 </body>
