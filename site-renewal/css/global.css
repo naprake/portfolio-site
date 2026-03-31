@@ -56,37 +56,48 @@ a {
 /* ----------------------------------------------------------- */
 
 .custom-cursor {
-  position: fixed;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  width: 100px;
-  margin-left: -50px;
-  margin-top: -50px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  outline: 2px solid #fff;
-  background-color: transparent;
-  transition-property: transform, scale, opacity;
-  transition-duration: 250ms;
-  transition-timing-function: ease-in-out;
-  scale: 0.5;
-  z-index: 10;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    width: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    outline: 1px solid #fff;
+    background-color: transparent;
+    transition-property: transform, scale, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    scale: 0.5;
+    z-index: 10;
 }
 .custom-cursor--link {
-  scale: 1;
-  outline: 1px solid #fff;
+    scale: 1;
+    outline: 1px dashed #fff;
+    animation: rotating 7s linear infinite;
 }
+
 .custom-cursor--init {
-  opacity: 1;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
     .custom-cursor {
         display: none;
     }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ----------------------------------------------------------- */
