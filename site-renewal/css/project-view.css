@@ -68,6 +68,9 @@
         width: 100vw;
         height: auto;
     }
+    .project-info-list {
+        padding: 20px;
+    }
     .project-gallery {
         width: 100vw;
     }

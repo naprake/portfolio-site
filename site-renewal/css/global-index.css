@@ -114,6 +114,7 @@ a {
         grid-template-columns: 1fr 2fr;
         grid-template-areas:
         "textname nav";
+        padding: 20px;
     }
     .starcontainer {
         display: none;

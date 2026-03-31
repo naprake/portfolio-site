@@ -96,7 +96,7 @@
 
 @media (max-width: 768px) {
     .projectlist {
-        padding: 20px;
+        padding: 0 20px;
     }
     .projectlist-items {
         grid-template-columns: 1fr;
