@@ -16,13 +16,25 @@
     position: fixed;
 }
 
-.project-info-list h1,
-.project-info-list ul {
-    padding: 4.125vh 4.125vw 4.125vh 4.125vw;
+.project-info-list {
+    padding: 45px;
 }
 
-.project-info-list ul li {
-    padding-bottom: 3vh;
+.project-info-list h1,
+.project-info-list ul {
+    opacity: 0;
+}
+
+.project-info-list ul li:nth-child(1) {
+    padding-top: 40px;
+}
+
+.project-info-list ul li:nth-child(2) {
+    padding-top: 10px;
+}
+
+.project-info-list ul li:nth-child(3) {
+    padding-top: 40px;
 }
 
 .project-gallery {

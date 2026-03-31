@@ -1,10 +1,6 @@
 .projectlist {
     width: 100%;
-    padding: 4.125%;
-}
-
-.projectlist-items:last-child {
-    border-bottom: solid 1px #0b0b0b;
+    padding: 0 45px;
 }
 
 .projectlist-items {
@@ -14,11 +10,15 @@
     "left right";
     grid-template-rows: auto;
     gap: 10px;
-    padding: 35px 0;
+    padding: 45px 0;
     border-top: solid 1px #0b0b0b;
     cursor: pointer;
     animation-delay: 3.0s;
     opacity: 0;
+}
+
+.projectlist a:last-of-type .projectlist-items {
+    border-bottom: solid 1px #0b0b0b;
 }
 
 .projectlist-items img {
@@ -27,15 +27,10 @@
     justify-self: flex-end;
     max-height: 100%;
     max-width: 100%;
-    filter: grayscale(1) !important;
     transition: all 0.2s linear;
     cursor: pointer;
-    animation-delay: 3.5s;
+    animation-delay: 3.2s;
     opacity: 0;
-}
-
-.projectlist-items:hover img {
-    filter: grayscale(0) !important;
 }
 
 .project-details ul li:not(:last-child) {
@@ -100,6 +95,9 @@
 }
 
 @media (max-width: 768px) {
+    .projectlist {
+        padding: 20px;
+    }
     .projectlist-items {
         grid-template-columns: 1fr;
         grid-template-areas: 

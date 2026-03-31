@@ -81,3 +81,13 @@
 .starcontainer {
     animation-delay: 2.6s;
 }
+
+/* PROJECT VIEW DELAYS                                          */
+
+.project-info-list h1 {
+    animation-delay: 1.5s;
+}
+
+.project-info-list ul {
+    animation-delay: 1.7s;
+}

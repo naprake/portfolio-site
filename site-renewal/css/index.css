@@ -1,5 +1,6 @@
 .sticky-header {
     position: fixed;
+    z-index: 1000;
 }
 
 /* ----------------------------------------------------------- */
@@ -9,7 +10,7 @@
 .spacer::before {
     content: "";
     position: fixed;
-    background-image: url("../assets/Licht-36.jpg");
+    background-image: url("../assets/BackgroundImage.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,18 +24,13 @@
 /* CONTACT CARD                                                */
 /* ----------------------------------------------------------- */
 
-.spacer {
-    height: 50vh;
-}
-
 .contactwrapper {
     overflow: hidden !important;
     height: 50vh;
     width: 100%;
     position: absolute;
-    z-index: 0;
-
     z-index: 10;
+    bottom: 0;
 }
 
 .contact-items {
@@ -79,36 +75,6 @@
     font-weight: normal;
 }
 
-@media (max-width: 768px) {
-    .underside-text {
-        grid-template-rows: 1fr;
-        grid-template-columns: auto auto;
-        grid-template-areas:
-        "star con";
-        overflow: hidden;
-    }
-    .getin {
-        display: none;
-    }
-    .contactbuttons {
-        grid-area: con;
-        justify-self: end;
-        align-self: end;
-        margin-top: auto;
-        width: fit-content;
-        text-align: right;
-    }
-    .starmobile {
-        display: block;
-        grid-area: star;
-        justify-self: start;
-        align-self: end;
-        margin-top: auto;
-        width: fit-content;
-        text-align: left;
-    }
-}
-
 
 
 .getin {
@@ -147,7 +113,7 @@
     color: #fff;
 }
 
-.contactbuttons li a::after {
+.contactbuttons li a::before {
     content: '';
     position: absolute;
     height: 1px;
@@ -158,24 +124,37 @@
     transition: all 0.2s ease-in-out;
 }
 
-.contactbuttons li a::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    left: 0;
-    bottom: -2px;
-    width: 0%;
-    background-color: #ff0000;
-    transition: all 0.2s ease-in-out;
-}
-
-.contactbuttons li a:hover::after,
-.contactbuttons li a:focus::after {
-    width: 100%;
-    transition-delay: 0.2s;
-}
-
 .contactbuttons li a:hover::before,
 .contactbuttons li a:focus::before {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .underside-text {
+        grid-template-rows: 1fr;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        "star con";
+        overflow: hidden;
+    }
+    .getin {
+        display: none;
+    }
+    .contactbuttons {
+        grid-area: con;
+        justify-self: end;
+        align-self: end;
+        margin-top: auto;
+        width: fit-content;
+        text-align: right;
+    }
+    .starmobile {
+        display: block;
+        grid-area: star;
+        justify-self: start;
+        align-self: end;
+        margin-top: auto;
+        width: fit-content;
+        text-align: left;
+    }
 }

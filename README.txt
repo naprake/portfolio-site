@@ -1,4 +1,4 @@
 Image Comopression:
 
-    mogrify -resize 2000x -quality 72 *.jpg
+    mogrify -resize 1600x -quality 70 *.jpg
 

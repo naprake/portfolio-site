@@ -67,15 +67,17 @@ a {
   margin-top: -50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: white;
+  outline: 2px solid #fff;
+  background-color: transparent;
   transition-property: transform, scale, opacity;
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
-  scale: 0.3;
+  scale: 0.5;
   z-index: 10;
 }
 .custom-cursor--link {
   scale: 1;
+  outline: 1px solid #fff;
 }
 .custom-cursor--init {
   opacity: 1;
@@ -96,7 +98,7 @@ a {
     left: 0;
     width: 100%;
     height: auto;
-    padding: 3.125%;
+    padding: 45px;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
@@ -366,5 +368,8 @@ a {
     align-self: flex-end;
     justify-self: flex-end;
     text-align: right;
+    }
+    .sticky-header {
+        padding: 20px;
     }
 }
