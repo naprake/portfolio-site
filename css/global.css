@@ -58,8 +58,8 @@ body::before {
     position: fixed;
     content: '';
     background-color: #000;
-    height: 100lvh !important;
-    width: 100lvw !important;
+    height: 120lvh !important;
+    width: 150lvw !important;
     z-index: 99999;
     display: flex;
 }
