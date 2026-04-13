@@ -2,6 +2,11 @@
 /* FONT PRESETS                                                */
 /* ----------------------------------------------------------- */
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 @font-face{
 font-family: HealTheWebB;
 src: url('fonts/HealTheWebB-Regular.woff') format('woff'), url('fonts/HealTheWebB-Regular.woff2') format('woff2');
@@ -21,17 +26,21 @@ font-display: swap;
 }
 
 small {
-    font-family: "Inter", system-ui;
-    font-size: 0.8rem;
+    font-family: "Rubik", system-ui;
+    font-size: 14px;
     font-weight: 300;
     line-height: 1.6;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 p {
-    font-family: "Inter", sans-serif;
-    font-size: 0.8rem;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.6;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 h3 {
@@ -43,7 +52,7 @@ h3 {
 }
 
 h2 {
-    font-family: "Inter", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 2rem;
     font-weight: 500;
     line-height: 1.15;

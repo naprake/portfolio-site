@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <!-- TITLE -->
     <title>Anakin de Wet</title>
@@ -80,32 +81,36 @@
 
 <section class="projects">
     <div class="projectlist">
-        <a class="project" href="frauen-formen-feminismus/">
+        <div class="project">
             <li class="projectlist-items animation-slideInTop" id="projectlist-itemsID">
                 <div class="project-details">
                     <h2 class="project-details-title animation-slideInTop">FRAUEN FORMEN FEMINISMUS</h2>
+                    <a class="button" href="frauen-formen-feminismus/">SEE MORE</a>
                     <ul class="project-details-cat animation-slideInTop">
                         <li><p>PROJECT TYPE</p></li>
                         <li><p>DATE</p></li>
                         <li><p>DESCRIPTION</p></li>
-
+                    </ul>
+                    <ul class="project-details-det animation-slideInTop">
                         <li><p>INFORMATIONAL BOOKLET,<br>UNIVERSITY</p></li>
                         <li><p>2026</p></li>
-                        <li><p>THE FOCUS OF THIS TASK WAS ON SETTING FEMINIST TEXT WITH TYPOGRAPHY IN THE FOREGROUND.</p></li>
+                        <li><p>THIS TASK WAS ON SETTING FEMINIST TEXT WITH A FOCUS ON TYPOGRAPHY</p></li>
                     </ul>
                 </div>
                 <img class="animation-slideInTop" src="../assets/FFF_Thumbnail.jpg">
             </li>
-        </a>
-        <a class="project" href="zephr/">
+        </div>
+        <div class="project">
             <li class="projectlist-items animation-slideInTop" id="projectlist-itemsID">
                 <div class="project-details">
                     <h2 class="project-details-title animation-slideInTop">ZEPHR</h2>
+                    <a class="button" href="zephr/">SEE MORE</a>
                     <ul class="project-details-cat animation-slideInTop">
                         <li><p>PROJECT TYPE<br></p></li>
                         <li><p>DATE</p></li>
                         <li><p>DESCRIPTION</p></li>
-
+                    </ul>
+                    <ul class="project-details-det animation-slideInTop">
                         <li><p>BRAND DESIGN CONCEPT,<br>UNIVERSITY</p></li>
                         <li><p>2025</p></li>
                         <li><p>THIS PROJECT WAS ABOUT CREATING A BRAND IDENTITY FOR A NEW COFFEE BRAND AND DESIGN THE PACKAGING OF AT LEAST ONE STRAIN.</p></li>
@@ -113,16 +118,18 @@
                 </div>
                 <img class="animation-slideInTop" src="../assets/Zephr_Thumbnail.jpg">
             </li>
-        </a>
-        <a class="project" href="what-is-it-about-them/">
+        </div>
+        <div class="project">
             <li class="projectlist-items animation-slideInTop" id="projectlist-itemsID">
                 <div class="project-details">
                     <h2 class="project-details-title animation-slideInTop">WHAT IS IT ABOUT THEM?</h2>
+                    <a class="button" href="what-is-it-about-them/">SEE MORE</a>
                     <ul class="project-details-cat animation-slideInTop">
                         <li><p>PROJECT TYPE</p></li>
                         <li><p>DATE</p></li>
                         <li><p>DESCRIPTION</p></li>
-
+                    </ul>
+                    <ul class="project-details-det animation-slideInTop">
                         <li><p>EDITORIAL SONG BOOK,<br>UNIVERSITY</p></li>
                         <li><p>2026</p></li>
                         <li><p>THIS PROJECT WAS ABOUT CREATING SONG BOOK FOR A THE SONG "XANNY" BY BILLIE EILISH.</p></li>
@@ -130,14 +137,19 @@
                 </div>
                 <img class="animation-slideInTop" src="../assets/Xanny_Thumbnail.jpg">
             </li>
-        </a>
+        </div>
     </div>
 </section>
 
 <footer>
     <div class="footerwrapper" id="footerwrapper">
         <div class="footercontainer">
-            <h1 class="footertitle">CONTACT<br>M<span>E</span></h1>
+            <h1 class="footertitle">ANAKIN<br>D<span>E</span> W<span>E</span>T</h1>
+
+            <div class="starcontainerfooter">
+                <p><a href="index.html">&#x2605</a></p>
+            </div>
+
             <ul class="footercontact">
                 <li class="animation-slideInRight"><a tabindex="0" href="mailto:anakindewet@yahoo.de">ANAKINDEWET@YAHOO.DE</a></li>
                 <li class="animation-slideInRight"><a tabindex="0" href="https://www.instagram.com/ani.dew/" target="_blank">@ANI.DEW</a></li>
@@ -162,6 +174,7 @@ const lenis = new Lenis({
 
 const cursor = document.querySelector(".custom-cursor");
 const links = document.querySelectorAll("a");
+const buttons = document.querySelectorAll("button");
 let isCursorInited = false;
 
 const initCursor = () => {
@@ -180,6 +193,16 @@ links.forEach((link) => {
   });
 
   link.addEventListener("mouseout", () => {
+    cursor.classList.remove("custom-cursor--link");
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", () => {
+    cursor.classList.add("custom-cursor--link");
+  });
+
+  button.addEventListener("mouseout", () => {
     cursor.classList.remove("custom-cursor--link");
   });
 });

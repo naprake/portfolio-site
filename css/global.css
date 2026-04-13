@@ -53,3 +53,24 @@ body::before {
         filter: blur(0px);
     }
 }
+
+.underconstruction {
+    position: fixed;
+    content: '';
+    background-color: #000;
+    height: 100lvh !important;
+    width: 100lvw !important;
+    z-index: 99999;
+    display: flex;
+}
+
+.underconstruction div {
+    align-self: center;
+    justify-self: center;
+    padding-left: 10%;
+}
+
+.underconstruction h1 {
+    font-size: 48px;
+    line-height: 1;
+}
