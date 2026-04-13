@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="../css/featured-projects.css">
 
     <!-- THEME COLORS -->
-    <meta name="theme-color" content="#ff0000">
-    <meta name="theme-color" content="#ff0000" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#ff0000" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#0b0b0b">
+    <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
 
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
@@ -84,8 +84,13 @@
         <div class="project">
             <li class="projectlist-items animation-slideInTop" id="projectlist-itemsID">
                 <div class="project-details">
-                    <h2 class="project-details-title animation-slideInTop">FRAUEN FORMEN FEMINISMUS</h2>
-                    <a class="button" href="frauen-formen-feminismus/">SEE MORE</a>
+                    <a class="project-details-title open-close animation-slideInTop">
+                        <h2>FRAUEN FORMEN FEMINISMUS</h2>
+                    </a>
+                    <div class="button open-close">
+                        <a class="button-more">SEE MORE</a>
+                        <a class="button-less">SEE LESS</a>
+                    </div>
                     <ul class="project-details-cat animation-slideInTop">
                         <li><p>PROJECT TYPE</p></li>
                         <li><p>DATE</p></li>
@@ -99,12 +104,25 @@
                 </div>
                 <img class="animation-slideInTop" src="../assets/FFF_Thumbnail.jpg">
             </li>
+            <section class="project-gallery">
+                <div><img class="animation-slideInTop" src="frauen-formen-feminismus/FFF1.jpg"></div>
+                <div><img class="animation-slideInTop" src="frauen-formen-feminismus/FFF2.jpg"></div>
+                <div><img class="animation-slideInTop" src="frauen-formen-feminismus/FFF3.jpg"></div>
+                <div><img class="animation-slideInTop" src="frauen-formen-feminismus/FFF4.jpg"></div>
+                <div><img class="animation-slideInTop" src="frauen-formen-feminismus/FFF5.jpg"></div>
+                <div><img class="animation-slideInTop" src="frauen-formen-feminismus/FFF6.jpg"></div>
+            </section>
         </div>
         <div class="project">
             <li class="projectlist-items animation-slideInTop" id="projectlist-itemsID">
                 <div class="project-details">
-                    <h2 class="project-details-title animation-slideInTop">ZEPHR</h2>
-                    <a class="button" href="zephr/">SEE MORE</a>
+                    <a class="project-details-title open-close animation-slideInTop">
+                        <h2>ZEPHR</h2>
+                    </a>
+                    <div class="button open-close">
+                        <a class="button-more">SEE MORE</a>
+                        <a class="button-less">SEE LESS</a>
+                    </div>
                     <ul class="project-details-cat animation-slideInTop">
                         <li><p>PROJECT TYPE<br></p></li>
                         <li><p>DATE</p></li>
@@ -113,17 +131,30 @@
                     <ul class="project-details-det animation-slideInTop">
                         <li><p>BRAND DESIGN CONCEPT,<br>UNIVERSITY</p></li>
                         <li><p>2025</p></li>
-                        <li><p>THIS PROJECT WAS ABOUT CREATING A BRAND IDENTITY FOR A NEW COFFEE BRAND AND DESIGN THE PACKAGING OF AT LEAST ONE STRAIN.</p></li>
+                        <li><p>THIS PROJECT WAS ABOUT CREATING A BRAND IDENTITY FOR A NEW COFFEE BRAND</p></li>
                     </ul>
                 </div>
                 <img class="animation-slideInTop" src="../assets/Zephr_Thumbnail.jpg">
             </li>
+            <section class="project-gallery">
+                <div><img class="animation-slideInTop" src="zephr/Zephr1.jpg"></div>
+                <div><img class="animation-slideInTop" src="zephr/Zephr2.jpg"></div>
+                <div><img class="animation-slideInTop" src="zephr/Zephr3.jpg"></div>
+                <div><img class="animation-slideInTop" src="zephr/Zephr4.jpg"></div>
+                <div><img class="animation-slideInTop" src="zephr/Zephr5.jpg"></div>
+                <div><img class="animation-slideInTop" src="zephr/Zephr6.jpg"></div>
+            </section>
         </div>
         <div class="project">
             <li class="projectlist-items animation-slideInTop" id="projectlist-itemsID">
                 <div class="project-details">
-                    <h2 class="project-details-title animation-slideInTop">WHAT IS IT ABOUT THEM?</h2>
-                    <a class="button" href="what-is-it-about-them/">SEE MORE</a>
+                    <a class="project-details-title open-close animation-slideInTop">
+                        <h2>WHAT IS IT ABOUT THEM?</h2>
+                    </a>
+                    <div class="button open-close">
+                        <a class="button-more">SEE MORE</a>
+                        <a class="button-less">SEE LESS</a>
+                    </div>
                     <ul class="project-details-cat animation-slideInTop">
                         <li><p>PROJECT TYPE</p></li>
                         <li><p>DATE</p></li>
@@ -137,6 +168,13 @@
                 </div>
                 <img class="animation-slideInTop" src="../assets/Xanny_Thumbnail.jpg">
             </li>
+            <section class="project-gallery">
+                <div><img class="animation-slideInTop" src="what-is-it-about-them/what1.jpg"></div>
+                <div><img class="animation-slideInTop" src="what-is-it-about-them/what2.jpg"></div>
+                <div><img class="animation-slideInTop" src="what-is-it-about-them/what3.jpg"></div>
+                <div><img class="animation-slideInTop" src="what-is-it-about-them/what4.jpg"></div>
+                <div><img class="animation-slideInTop" src="what-is-it-about-them/what5.jpg"></div>
+            </section>
         </div>
     </div>
 </section>
@@ -219,6 +257,15 @@ document.addEventListener("mousemove", (e) => {
 });
 
 document.addEventListener("mouseout", destroyCursor);
+
+const seeMore = document.querySelectorAll('.open-close');
+
+seeMore.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+        const parent = e.currentTarget.parentElement.parentElement.parentElement;
+        parent.classList.toggle('show-more');
+    })
+})
 
 </script>
 

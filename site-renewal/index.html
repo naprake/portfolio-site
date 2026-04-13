@@ -118,6 +118,7 @@ const lenis = new Lenis({
 
 const cursor = document.querySelector(".custom-cursor");
 const links = document.querySelectorAll("a");
+const buttons = document.querySelectorAll("button");
 let isCursorInited = false;
 
 const initCursor = () => {
@@ -136,6 +137,16 @@ links.forEach((link) => {
   });
 
   link.addEventListener("mouseout", () => {
+    cursor.classList.remove("custom-cursor--link");
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", () => {
+    cursor.classList.add("custom-cursor--link");
+  });
+
+  button.addEventListener("mouseout", () => {
     cursor.classList.remove("custom-cursor--link");
   });
 });
