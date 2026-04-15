@@ -26,7 +26,7 @@ font-display: swap;
 }
 
 small {
-    font-family: "Rubik", system-ui;
+    font-family: "Rubik", sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.6;
@@ -36,15 +36,15 @@ small {
 
 p {
     font-family: "Rubik", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.6;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 h3 {
-    font-family: "HealTheWebB", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.15;

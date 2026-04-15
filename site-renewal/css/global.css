@@ -39,7 +39,7 @@ html {
 }
 
 body {
-    color: #f4f4f4;
+    color: whitesmoke;
     background-color: #0b0b0b;
     align-items: center;
     background-size: cover;
@@ -304,6 +304,39 @@ a {
     .starcontainerfooter {
         display: none;
     }
+}
+
+
+/* ----------------------------------------------------------- */
+/* LIGHTBOX                                                    */
+/* ----------------------------------------------------------- */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 99999;
+}
+
+.lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 2px;
 }
 
 
