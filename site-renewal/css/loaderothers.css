@@ -25,12 +25,16 @@
 }
 
 @keyframes slideAway {
-    from {
+    0% {
         opacity: 1;
         transform: translateY(0);
     }
-    to {
-        opacity: 1;
+    99% {
+        transform: translateY(0);
+    }
+    100% {
+        display: none;
+        opacity: 0;
         transform: translateY(-100%);
     }
 }
@@ -44,9 +48,13 @@
 @keyframes rotatePlus {
     from {
         transform: rotate(0deg);
+        scale: 1.5;
+        opacity: 1;
     }
     to {
         transform: rotate(360deg);
+        scale: 0.5;
+        opacity: 0;
     }
 }
 

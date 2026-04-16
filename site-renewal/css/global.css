@@ -15,7 +15,7 @@ html {
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
-    cursor: crosshair !important;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto !important;
 }
 
 *::-webkit-scrollbar {
@@ -23,28 +23,33 @@ html {
 }
 
 *::selection {
-  background: #000;
+  background: #fff;
   opacity: 1;
-  color: #f4f4f4;
+  color: #000;
 }
 *::-moz-selection {
-  background: #000;
+  background: #fff;
   opacity: 1;
-  color: #f4f4f4;
+  color: #000;
 }
 *::-webkit-selection {
-  background: #000;
+  background: #fff;
   opacity: 1;
-  color: #f4f4f4;
+  color: #000;
 }
 
 body {
-    color: whitesmoke;
+    color: #f4f4f4;
     background-color: #0b0b0b;
     align-items: center;
     background-size: cover;
     overflow-x: hidden;
     margin: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
 }
 
 a {
@@ -61,24 +66,22 @@ a {
     top: 0;
     left: 0;
     pointer-events: none;
-    mix-blend-mode: difference;
-    width: 100px;
-    margin-left: -50px;
-    margin-top: -50px;
+    width: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
     aspect-ratio: 1;
     border-radius: 50%;
-    outline: 1px solid #fff;
+    outline: 2px solid #fff;
     background-color: transparent;
     transition-property: transform, scale, opacity;
     transition-duration: 250ms;
     transition-timing-function: ease-in-out;
     scale: 0.5;
-    z-index: 10;
+    z-index: 1000;
 }
 .custom-cursor--link {
     scale: 1;
-    outline: 1px dashed #fff;
-    animation: rotating 7s linear infinite;
+    outline: 1px solid #fff;
 }
 
 .custom-cursor--init {
@@ -104,36 +107,28 @@ a {
 /* HEADER + NAVIGATION                                         */
 /* ----------------------------------------------------------- */
 
-.sticky-header {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    padding: 45px;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "textname plus nav";
-    z-index: 1000;
+.view {
+    display: flex;
 }
 
-@media (max-width: 768px) {
-    .sticky-header {
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas:
-        "textname nav";
-    }
-    .starcontainer {
-        display: none;
-    }
+.sticky-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    z-index: 100;
+    border-right: 1px solid #141414;
 }
 
 .header-text {
     grid-area: textname;
     align-items: flex-start;
     justify-content: flex-start;
+    flex: 1;
 }
 
 .header-text h1 {
@@ -142,11 +137,13 @@ a {
 
 
 .nav {
-    grid-area: nav;
+    display: flex;
+    flex-direction: column;
     align-self: flex-start;
-    justify-self: flex-end;
-    text-align: right;
+    text-align: left;
+    gap: 10px;
 }
+
 
 .nav li {
     opacity: 0;
@@ -154,19 +151,26 @@ a {
 }
 
 .nav li:hover {
-    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .nav li a {
-    font-size: 1.4rem;
-    line-height: 2.1;
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    opacity: 0.75;
+}
+
+.nav li a:hover {
+    opacity: 1;
 }
 
 .nav li a::before {
     content: '';
     position: absolute;
     height: 1px;
-    right: 0;
+    left: 0;
     bottom: -2px;
     width: 0%;
     background-color: #f4f4f4;
@@ -349,7 +353,6 @@ a {
     animation-name: slideInRight;
     animation-duration: 0.6s;
     animation-timing-function: ease-out;
-    animation-direction: forwards;
     animation-fill-mode: forwards;
 }
 
@@ -375,7 +378,6 @@ a {
     animation-name: slideInLeft;
     animation-duration: 0.6s;
     animation-timing-function: ease-out;
-    animation-direction: forwards;
     animation-fill-mode: forwards;
 }
 
@@ -401,7 +403,6 @@ a {
     animation-name: slideInBottom;
     animation-duration: 0.4s;
     animation-timing-function: ease-out;
-    animation-direction: forwards;
     animation-fill-mode: forwards;
 }
 
@@ -422,7 +423,6 @@ a {
     animation-name: slideInTop;
     animation-duration: 0.4s;
     animation-timing-function: ease-out;
-    animation-direction: forwards;
     animation-fill-mode: forwards;
 }
 

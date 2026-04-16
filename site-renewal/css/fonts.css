@@ -60,9 +60,9 @@ h2 {
 
 h1 {
     font-family: "HealTheWebB", sans-serif;
-    font-size: 3.815rem;
+    font-size: 64px;
     font-weight: normal;
-    line-height: 1.15;
+    line-height: 1;
     letter-spacing: -0.022rem;
 }
 
@@ -72,9 +72,8 @@ h1 span {
 
 a {
     position: relative;
-    font-family: "HealTheWebA", sans-serif;
+    font-family: "Rubik", sans-serif;
     text-decoration: none;
-    cursor: pointer;
 }
 
 @media (max-width: 768px) {

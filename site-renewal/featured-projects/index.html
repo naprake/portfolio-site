@@ -52,6 +52,7 @@
 
 <body role="main">
 
+
 <!-- LOADER -->
 <div id="loadercontainer">
     <div id="loader">
@@ -59,9 +60,7 @@
     </div>
 </div> 
 
-<div class="lightbox" id="lightbox">
-    <img id="lightbox-img" src="" alt="">
-</div>
+<section class="view">
 
 <!-- STICKY-HEADER / NAVIGATION -->
 <header class="sticky-header">
@@ -71,43 +70,24 @@
         <h1 class="animation-slideInLeft">D<span>E</span> W<span>E</span>T</h1>
     </div>
 
-    <div class="starcontainer animation-slideInTop">
-        <p><a href="index.html">&#x2605</a></p>
-    </div>
-
     <ul class="nav">
-        <li class="animation-slideInRight"><a tabindex="0" href="../">HOME</a></li>
-        <li class="animation-slideInRight"><a tabindex="0" href="../archive/">ARCHIVE</a></li>
-        <li class="animation-slideInRight"><a tabindex="0" href="../about/">ABOUT ME</a></li>
+        <li class="animation-slideInLeft"><a tabindex="0" href="https://www.instagram.com/ani.dew/">@ani.dew</a></li>
+        <li class="animation-slideInLeft"><a tabindex="0" href="mailto:hello@anakindewet.com">hello[at]anakindewet.com</a></li>
     </ul>
 
 </header>
 
-
+<!-- PROJECTS -->
 <section class="projects">
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="">
+    </div>
     <div id="projectlist"></div>
 </section>
 
-
-<footer>
-    <div class="footerwrapper" id="footerwrapper">
-        <div class="footercontainer">
-            <h1 class="footertitle">CONTACT</h1>
-
-            <div class="starcontainerfooter">
-                <p><a href="index.html">&#x2605</a></p>
-            </div>
-
-            <ul class="footercontact">
-                <li class="animation-slideInRight"><a tabindex="0" href="mailto:anakindewet@yahoo.de">ANAKINDEWET@YAHOO.DE</a></li>
-                <li class="animation-slideInRight"><a tabindex="0" href="https://www.instagram.com/ani.dew/" target="_blank">@ANI.DEW</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+</section>
 
 <div class="custom-cursor"></div>
-
 
 <script>
 
@@ -167,14 +147,14 @@ const projectData = [
         shortdescription: "App concept for an everyday problem",
         thumbnail: "Ignit_Thumbnail",
         gallery: [
-            "Ignit1.jpg",
-            "Ignit2.jpg",
-            "Ignit3.jpg",
-            "Ignit4.jpg",
-            "Ignit5.jpg",
-            "Ignit6.jpg",
-            "Ignit7.jpg",
-            "Ignit8.jpg"
+            "ignit1.jpg",
+            "ignit2.jpg",
+            "ignit3.jpg",
+            "ignit4.jpg",
+            "ignit5.jpg",
+            "ignit6.jpg",
+            "ignit7.jpg",
+            "ignit8.jpg"
         ],
         folder: "ignit"
     },
@@ -220,16 +200,20 @@ projectData.map(function(item) {
                             <a class="button-less">- CLOSE</a>
                         </div>
                     </div>
-                    <ul class="project-details-cat animation-slideInTop">
-                        <li><p>Project Type</p></li>
-                        <li><p>Date</p></li>
-                        <li><p>Description</p></li>
-                    </ul>
-                    <ul class="project-details-det animation-slideInTop">
-                        <li><p>${item.type}</p></li>
-                        <li><p>${item.date}</p></li>
-                        <li><p>${item.shortdescription}</p></li>
-                    </ul>
+                    <div class="project-details-text animation-slideInTop">
+                        <ul>
+                            <li class="text-left"><p>Description</p></li>
+                            <li class="text-right"><p>${item.shortdescription}</p></li>
+                        </ul>
+                        <ul>
+                            <li class="text-left"><p>Project Type</p></li>
+                            <li class="text-right"><p>${item.type}</p></li>
+                        </ul>
+                        <ul>
+                            <li class="text-left"><p>Date</p></li>
+                            <li class="text-right"><p>${item.date}</p></li>
+                        </ul>
+                    </div>
                 </div>
                 <img class="animation-slideInTop" src="thumbnails/${item.thumbnail}.jpg">
             </li>
