@@ -78,8 +78,9 @@ a {
     border-right: 1px solid #141414;
 }
 
-.header-text h1 {
+.header-text img {
     opacity: 0;
+    width: 210px;
 }
 
 .nav {
@@ -235,15 +236,22 @@ nav li a:focus {
     .sticky-header {
         position: relative;
         height: auto;
-        padding: 25px;
-        flex-direction: row;
+        padding: 20px;
         border-right: transparent;
+    }
+    .header-text img {
+        width: 100%;
+        padding: 10px 5px 5px 5px;
+    }
+    .header-text .animation-slideInLeft {
+        animation-name: slideInTop;
     }
     .nav {
         text-align: right;
+        padding: 40px 20px 20px 20px;
     }
 
     .nav .animation-slideInLeft {
-        animation-name: slideInRight;
+        animation-name: slideInTop;
     }
 }
