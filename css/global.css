@@ -2,75 +2,226 @@
 /* GLOBAL STYLES                                               */
 /* ----------------------------------------------------------- */
 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto !important;
 }
 
 *::-webkit-scrollbar {
     display: none;
 }
 
+*::selection {
+  background: #fff;
+  opacity: 1;
+  color: #000;
+}
+*::-moz-selection {
+  background: #fff;
+  opacity: 1;
+  color: #000;
+}
+*::-webkit-selection {
+  background: #fff;
+  opacity: 1;
+  color: #000;
+}
+
 body {
-    background-color: hsl(60, 7%, 6%);
-    color: #fff;
-    font-family: "Google Sans Code", monotype;
+    color: #f4f4f4;
+    background-color: #0b0b0b;
     align-items: center;
+    background-size: cover;
+    overflow-x: hidden;
+    margin: 0;
 }
 
-body::before {
-  content: "";
-  width: 100%;
-  height: 100px;
-  backdrop-filter: blur(8px);
-  mask: linear-gradient(black, black 20%, transparent);
-  z-index: 1000;
-  position: fixed;
+ul,
+li {
+    list-style-type: none;
 }
 
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 8px;
-    font-size: 10px;
+a {
+    color: #f4f4f4;
+}
+
+.view {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ----------------------------------------------------------- */
+/* HEADER + NAVIGATION                                         */
+/* ----------------------------------------------------------- */
+
+.sticky-header {
     position: sticky;
-    background-color: hsla(60, 7%, 6%, 0.8);
-    color: hsl(60, 7%, 70%);
-    border-radius: 100pt;
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 70px;
-    bottom: 1vh;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+    border-right: 1px solid #141414;
 }
 
-@keyframes BlurEffect {
+.header-text h1 {
+    opacity: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+
+.nav li {
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
+.nav li a {
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    opacity: 0.75;
+}
+
+.nav li a:hover,
+nav li a:focus {
+    opacity: 1;
+}
+
+.nav li a::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    background-color: #f4f4f4;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav li a:hover::before,
+.nav li a:focus::before {
+    width: 100%;
+}
+
+/* ----------------------------------------------------------- */
+/* LIGHTBOX                                                    */
+/* ----------------------------------------------------------- */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 99999;
+}
+
+.lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 2px;
+}
+
+/* ----------------------------------------------------------- */
+/* ANIMATIONS                                                  */
+/* ----------------------------------------------------------- */
+
+.animation-slideInLeft {
+    animation-name: slideInLeft;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        filter: blur(2.5px);
+        transform: translateX(-20px);
+    }
+    55% {
+        opacity: 1;
+        filter: none;
+        transform: translateX(5px);
+    }
+    100% {
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+    }
+}
+
+.animation-slideInTop {
+    animation-name: slideInTop;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInTop {
     from {
-        filter: blur(10px);
+        opacity: 0;
+        filter: blur(2.5px);
+        transform: translateY(-15px);
     }
     to {
-        filter: blur(0px);
+        opacity: 1;
+        filter: none;
+        transform: translateY(0);
     }
 }
 
-.underconstruction {
-    position: fixed;
-    content: '';
-    background-color: #000;
-    height: 120lvh !important;
-    width: 150lvw !important;
-    z-index: 99999;
-    display: flex;
-}
 
-.underconstruction div {
-    align-self: center;
-    justify-self: center;
-    padding-left: 10%;
-}
+/* ----------------------------------------------------------- */
+/* MEDIA                                                       */
+/* ----------------------------------------------------------- */
 
-.underconstruction h1 {
-    font-size: 48px;
-    line-height: 1;
+@media (max-width: 768px) {
+    .view {
+        flex-direction: column;
+    }
+    .sticky-header {
+        position: relative;
+        height: auto;
+        padding: 25px;
+        flex-direction: row;
+        border-right: transparent;
+    }
+    .nav {
+        text-align: right;
+    }
 }

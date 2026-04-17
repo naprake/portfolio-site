@@ -6,114 +6,285 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.17/dist/lenis.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/loaderothers.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/featured-projects.css">
 
     <!-- THEME COLORS -->
-    <meta name="theme-color" content="#000000">
-    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#0b0b0b">
+    <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
 
     <!-- FAVICONS -->
-    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" type="image/x-icon">
     <link rel="favicon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/icons/favicon_32.png">
-    <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/icons/favicon_16.png">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="icons/favicon_32.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="icons/favicon_16.png">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Lacquer&family=Plaster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <!-- TITLE -->
     <title>Anakin de Wet</title>
-    <meta name="description" content="Portfolio/Archive of Anakin de Wet">
+    <meta name="description" content="Portfolio of Anakin de Wet">
 
     <!-- OPEN GRAPH META TAGS -->
-    <meta property="og:image" content="assets/icons/apple-touch-icon.png">
+    <meta property="og:image" content="icons/apple-touch-icon.png">
     <meta property="og:title" content="Anakin de Wet">
-    <meta property="og:description" content="Portfolio/Archive of Anakin de Wet">
-    <meta property="og:logo" content="assets/icons/apple-touch-icon.png">
+    <meta property="og:description" content="Portfolio/Selected Projects of Anakin de Wet">
+    <meta property="og:logo" content="icons/apple-touch-icon.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Anakin de Wet">
 
     <link rel="canonical" href="https://anakindewet.com">
-    <meta name="description" content="Portfolio/Archive of Anakin de Wet. Communications Design Student at the HAW Hamburg">
+    <meta name="description" content="Portfolio/Selected Projects of Anakin de Wet. Communications Design Student at the HAW Hamburg">
     <meta name="Keywords" content="Anakin, de Wet, de, Wet, Anakin de Wet, Crispin, Anakin Crispin, Crispin de, Crispin de Wet, Crispin We,
     Anakin de, Anakin Wet, Anakin Crispin de Wet, Design, Kommunikationsdesign, HAW, Grafikdesign, Graphicdesign, Brand, Drawing, Painting, Works, 
-    Sketch, Art, Archive, Contact, About">
+    Sketch, Art, Archive, Contact, About, CI, Corporate Identity">
 </head>
 
 <body role="main">
 
-<section class="underconstruction">
 
-<div>
-    <h1>ANAKIN<br>DE WET</h1>
-    <p>UNDER CONSTRUCTION</p>
-</div>
+<!-- LOADER -->
+<div id="loadercontainer">
+    <div id="loader">
+        <p class="rotatestar">&#x2605</p>
+    </div>
+</div> 
 
-</section>
-
-<!-- LIGHTBOX FOR IMAGE VIEWING -->
 <div class="lightbox" id="lightbox">
     <img id="lightbox-img" src="" alt="">
 </div>
 
-<!-- HEADER / NAVIGATION -->
-<header class="header" role="banner">
-    <nav class="nav">
-        <!-- MAIN MENU -->
-        <ul class="menu" role="navigation">
-            <li class="menu-item"><a href="archive.html" role="button" title="Archive">Archive</a></li>
-            <li class="menu-item"><a href="about.html" role="button" title="About">About</a></li>
-        </ul>
+<section class="view">
 
-        <!-- LOGO -->
-        <div class="logo">
-            <a href="index.html">Anakin de Wet</a>
-        </div>
+<!-- STICKY-HEADER / NAVIGATION -->
+<header class="sticky-header">
 
-        <!-- LINKS -->
-        <ul class="links">
-            <li class="links-item"><a href="https://www.instagram.com/ani.dew/" target="_blank" role="button" title="Instagram">Instagram</a></li>
-            <li class="links-item"><a href="mailto:anakindewet@yahoo.de" role="button" title="Contact">Contact</a></li>
-        </ul>
-
-        <!-- BURGER BUTTON -->
-        <button class="burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-
-    <!-- MOBILE MENU (hidden by default) -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="archive.html" role="button" title="Archive">Archive</a>
-        <a href="about.html" role="button" title="About">About</a>
-        <a href="https://www.instagram.com/ani.dew/" target="_blank" role="button" title="Instagram">Instagram</a>
-        <a href="mailto:anakindewet@yahoo.de" role="button" title="Contact">Contact</a>
+    <div class="header-text">
+        <h1 class="animation-slideInLeft">ANAKIN</h1>
+        <h1 class="animation-slideInLeft">D<span>E</span> W<span>E</span>T</h1>
     </div>
+
+    <ul class="nav">
+        <li class="animation-slideInLeft"><a tabindex="0" href="https://www.instagram.com/ani.dew/">@ani.dew</a></li>
+        <li class="animation-slideInLeft"><a tabindex="0" href="mailto:hello@anakindewet.com">hello[at]anakindewet.com</a></li>
+    </ul>
+
 </header>
 
-<!-- Gallery Section -->
-<section class="section">
-    <div class="scroll-container" id="dynamicGallery"></div>
+<!-- PROJECTS -->
+<section class="projects">
+    <div id="projectlist"></div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <p>W.I.P. - © 2025 Anakin de Wet</p>
-</footer>
+</section>
 
-<!-- SCRIPTS -->
-<script src="js/gallery-index.js"></script>
-<script src="js/menu.js"></script>
+<div class="custom-cursor"></div>
+
+<script>
+
+const projectData = [
+    {
+        title: "FRAUEN FORMEN FEMINISMUS",
+        type: "Typography Design, Base Year, HAW Hamburg",
+        date: "2026",
+        shortdescription: "Brochure With Feminist And Antidiscriminatory Literature",
+        longdescription: "The task for this project was to create a brochure with at least two different feminist and/or anti-discriminatory texts, either chosen from options presented by Lisa Marie Fechteler and Saskia Kühne­mund or picked by yourself.<br><br>In the process of making this brochure, I decided to play with bold shapes and placement. My focus was on making the pages look interesting but still be very readable.",
+        thumbnail: "FFF_Thumbnail",
+        gallery: [
+            "FFF1.jpg",
+            "FFF2.jpg",
+            "FFF3.jpg",
+            "FFF4.jpg",
+            "FFF5.jpg",
+            "FFF6.jpg"
+        ],
+        folder: "featured-projects/frauen-formen-feminismus"
+    },
+    {
+        title: "IGNIT",
+        type: "Interaction Design, Base Year, HAW Hamburg",
+        date: "2025",
+        shortdescription: "App Concept For An Everyday Problem",
+        longdescription: "An App for creative pauses and an alternative to doomscrolling. It should inspire, relieve blocks, and give space to form a community.<br><br>›Ignit‹ is an interactive App prototype. It is supposed to solve an everyday problem. In my case: (artists) blocks and doomscrolling.<br><br>I took inspiration from simple online forums like Reddit or 4chan that enable the focus to be on the community and interaction.",
+        thumbnail: "Ignit_Thumbnail",
+        gallery: [
+            "ignit1.jpeg",
+            "ignit3.jpeg",
+            "ignit4.jpeg",
+            "ignit5.jpeg",
+            "ignit6.jpeg",
+            "ignit7.jpeg",
+            "ignit8.jpeg",
+            "ignit9.jpeg",
+            "ignit11.jpeg"
+        ],
+        folder: "featured-projects/ignit"
+    },
+    {
+        title: "WHAT IS IT ABOUT THEM?",
+        type: "Editorial Design, Base Year, HAW Hamburg",
+        date: "2026",
+        shortdescription: "Songbook For ›xanny‹ By Billie Eilish",
+        longdescription: "This Songbook tries to make the feelings and relations I get when listening to ›xanny‹ by Billie Eilish visible.<br><br>I played with a lot of mixed media and scanning. This makes for a great texture and atmosphere.<br><br>For me, this song was about two different parts of my life and personality. A conflict of interest.",
+        thumbnail: "Xanny_Thumbnail",
+        gallery: [
+            "what1.jpg",
+            "what2.jpg",
+            "what3.jpg",
+            "what4.jpg",
+            "what5.jpg"
+        ],
+        folder: "featured-projects/what-is-it-about-them"
+    },
+    {
+        title: "WHAT IS A TYPEFACE?",
+        type: "Type Design, Base Year, HAW Hamburg",
+        date: "2025",
+        shortdescription: "Poster Answering The Question ›What Is A Typeface?‹",
+        longdescription: "This poster was the result of trying to define and present my understanding of a typeface.<br><br>It presents the fluidity and human nature of type in contrast to its many systems and structures that keep text in clear patterns.",
+        thumbnail: "Typeface_Thumbnail",
+        gallery: [
+            "typeface1.jpg",
+            "typeface2.jpg",
+            "typeface3.jpg",
+            "typeface4.jpg",
+            "typeface5.jpg",
+            "typeface6.jpg",
+            "typeface7.jpg"
+        ],
+        folder: "featured-projects/typeface"
+    },
+    {
+        title: "ZEPHR",
+        type: "Brand Design, Base Year, HAW Hamburg",
+        date: "2025",
+        shortdescription: "Coffee Brand Identity And Packaging",
+        longdescription: "Zephr Coffee is the result of a Brand Design base course task. The goal was to create a new coffee brand identity from scratch.<br><br>Zephr is focused towards outdoorsy and adventurous people. It is supposed to portray movement and freshness.<br><br>The ›Zephr‹ stems from the Greek god of the west wind, ›Zephyr‹.",
+        thumbnail: "Zephr_Thumbnail",
+        gallery: [
+            "Zephr1.jpg",
+            "Zephr2.jpg",
+            "Zephr3.jpg",
+            "Zephr4.jpg",
+            "Zephr5.jpg",
+            "Zephr6.jpg"
+        ],
+        folder: "featured-projects/zephr"
+    }
+];
+
+const projectContainer = document.getElementById('projectlist');
+
+projectData.map(function(item) {
+
+    let projectarticle = document.createElement('article');
+    projectarticle.className = "project";
+
+    const galleryMarkup = item.gallery.map(img => {
+        return `<div><img class="animation-slideInTop" src="${item.folder}/${img}"></div>`;
+    }).join('');
+
+    const markup = `
+            <li class="project-items animation-slideInTop">
+                <div class="project-details">
+                    <div class="project-details-title-wrapper">
+                        <a class="project-details-title open-close animation-slideInTop">
+                            <h2>${item.title}</h2>
+                        </a>
+                        <div class="button open-close">
+                            <a class="button-more">+ EXPAND</a>
+                            <a class="button-less">- CLOSE</a>
+                        </div>
+                    </div>
+                    <div class="project-details-text animation-slideInTop">
+                        <ul>
+                            <li class="text-left"><p>Description</p></li>
+                            <li class="text-right"><p>${item.shortdescription}</p></li>
+                        </ul>
+                        <ul>
+                            <li class="text-left"><p>Project Type</p></li>
+                            <li class="text-right"><p>${item.type}</p></li>
+                        </ul>
+                        <ul>
+                            <li class="text-left"><p>Date</p></li>
+                            <li class="text-right"><p>${item.date}</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="animation-slideInTop" src="featured-projects/thumbnails/${item.thumbnail}.jpg">
+            </li>
+            <section class="project-expand">
+                <p>${item.longdescription}</p>
+                <div class="project-gallery">
+                    ${galleryMarkup}
+                </div>
+            </section>
+    `;
+
+    projectarticle.innerHTML = markup;
+    projectContainer.append(projectarticle);
+
+});
+
+</script>
+
+<script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+<script>
+
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+</script>
+
+<script>
+
+const seeMore = document.querySelectorAll('.open-close');
+
+seeMore.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+        const parent = e.currentTarget.parentElement.parentElement.parentElement.parentElement;
+        parent.classList.toggle('show-more');
+    })
+})
+
+</script>
+
+<script>
+
+const scroller = document.querySelector(".projects");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+if (lightbox && lightboxImg) {
+    scroller.addEventListener("click", (e) => {
+        const target = e.target;
+        if (target && target.tagName === "IMG") {
+            lightboxImg.src = target.src;
+            lightbox.classList.add("open");
+        }
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightboxImg) return;
+        lightbox.classList.remove("open");
+    });
+} else {
+    console.warn("Lightbox elements not found; skipping lightbox setup.");
+}
+
+</script>
 
 </body>
 
 </html>
+
