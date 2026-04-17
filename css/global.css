@@ -185,6 +185,24 @@ nav li a:focus {
     }
 }
 
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        filter: blur(2.5px);
+        transform: translateX(20px);
+    }
+    55% {
+        opacity: 1;
+        filter: none;
+        transform: translateX(-5px);
+    }
+    100% {
+        opacity: 1;
+        filter: none;
+        transform: translateX(0);
+    }
+}
+
 .animation-slideInTop {
     animation-name: slideInTop;
     animation-duration: 0.4s;
@@ -223,5 +241,9 @@ nav li a:focus {
     }
     .nav {
         text-align: right;
+    }
+
+    .nav .animation-slideInLeft {
+        animation-name: slideInRight;
     }
 }
