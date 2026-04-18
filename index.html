@@ -166,12 +166,12 @@ const projectData = [
         longdescription: "Zephr Coffee is the result of a Brand Design base course task. The goal was to create a new coffee brand identity from scratch.<br><br>Zephr is focused towards outdoorsy and adventurous people. It is supposed to portray movement and freshness.<br><br>The ›Zephr‹ stems from the Greek god of the west wind, ›Zephyr‹.",
         thumbnail: "Zephr_Thumbnail",
         gallery: [
-            "Zephr1.avif",
-            "Zephr2.avif",
-            "Zephr3.avif",
-            "Zephr4.avif",
-            "Zephr5.avif",
-            "Zephr6.avif"
+            "zephr1.avif",
+            "zephr2.avif",
+            "zephr3.avif",
+            "zephr4.avif",
+            "zephr5.avif",
+            "zephr6.avif"
         ],
         folder: "featured-projects/zephr"
     }
@@ -185,7 +185,7 @@ projectData.map(function(item) {
     projectarticle.className = "project";
 
     const galleryMarkup = item.gallery.map(img => {
-        return `<div><img class="animation-slideInTop" src="${item.folder}/${img}"></div>`;
+        return `<div><img class="animation-slideInTop" src="${item.folder}/${img}" alt="Project Image"></div>`;
     }).join('');
 
     const markup = `
@@ -215,7 +215,7 @@ projectData.map(function(item) {
                         </ul>
                     </div>
                 </div>
-                <img class="animation-slideInTop" src="featured-projects/thumbnails/${item.thumbnail}.avif">
+                <img class="animation-slideInTop" src="featured-projects/thumbnails/${item.thumbnail}.avif" alt="Project Thumbnail">
             </li>
             <section class="project-expand">
                 <p>${item.longdescription}</p>
