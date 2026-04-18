@@ -277,6 +277,7 @@ a {
 .header-text img {
     opacity: 0;
     width: 210px;
+    height: 111px;
 }
 
 .nav {
@@ -386,7 +387,8 @@ nav li a:focus {
 .project-items img {
     display: block;
     flex: 0;
-    max-width: 250px;
+    width: 250px;
+    height: 250px;
     transition: all 0.2s linear;
     animation-delay: 3.2s;
     opacity: 0;

@@ -185,7 +185,7 @@ projectData.map(function(item) {
     projectarticle.className = "project";
 
     const galleryMarkup = item.gallery.map(img => {
-        return `<div><img class="animation-slideInTop" src="${item.folder}/${img}" alt="Project Image"></div>`;
+        return `<div><img loading="lazy" class="animation-slideInTop" src="${item.folder}/${img}" alt="Project Image"></div>`;
     }).join('');
 
     const markup = `
