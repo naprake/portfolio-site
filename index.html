@@ -65,7 +65,8 @@
 <header class="sticky-header">
 
     <div class="header-text">
-        <img class="animation-slideInLeft" src="icons/logo.svg" alt="Anakin de Wet logo">
+        <img class="animation-slideInLeft" src="icons/logo-top.svg" alt="Anakin de Wet logo - Top">
+        <img class="animation-slideInLeft" src="icons/logo-bottom.svg" alt="Anakin de Wet logo - Bottom">
     </div>
 
     <ul class="nav">
@@ -189,15 +190,15 @@ projectData.map(function(item) {
     }).join('');
 
     const markup = `
-            <li class="project-items animation-slideInTop">
+            <li class="project-items">
                 <div class="project-details">
                     <div class="project-details-title-wrapper">
-                        <a class="project-details-title open-close animation-slideInTop">
+                        <a class="project-details-title open-close animation-slideInTop" tabindex="0">
                             <h2>${item.title}</h2>
                         </a>
-                        <div class="button open-close">
-                            <a class="button-more">+ EXPAND</a>
-                            <a class="button-less">- CLOSE</a>
+                        <div class="button open-close animation-slideInTop">
+                            <a class="button-more" tabindex="0">+ EXPAND</a>
+                            <a class="button-less" tabindex="0">- CLOSE</a>
                         </div>
                     </div>
                     <div class="project-details-text animation-slideInTop">
