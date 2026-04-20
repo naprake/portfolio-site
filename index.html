@@ -69,6 +69,10 @@
         <img class="animation-slideInLeft" src="icons/logo-bottom.svg" alt="Anakin de Wet logo - Bottom">
     </div>
 
+    <div class="statement">
+        <p class="animation-slideInLeft">My graphic design work centres around identity and storytelling.<br>Each element is carefully considered and aligned with your desired message.</p>
+    </div>
+
     <ul class="nav">
         <li class="animation-slideInLeft"><a tabindex="0" href="https://www.instagram.com/ani.dew/">@ani.dew</a></li>
         <li class="animation-slideInLeft"><a tabindex="0" href="mailto:hello@anakindewet.com">hello[at]anakindewet.com</a></li>
@@ -106,6 +110,37 @@ const projectData = [
         folder: "featured-projects/frauen-formen-feminismus"
     },
     {
+        title: "PÂVOIA",
+        type: "Graphic Design Work, Client",
+        date: "2026",
+        shortdescription: "A Bit Of Design Work For the Pâvoia Festival",
+        longdescription: "",
+        thumbnail: "Pavoia_Thumbnail",
+        gallery: [
+            "pavoia1.avif",
+            "pavoia2.avif",
+            "pavoia3.avif",
+            "pavoia4.avif"
+        ],
+        folder: "featured-projects/pavoia"
+    },
+    {
+        title: "WHAT IS IT ABOUT THEM?",
+        type: "Editorial Design, Base Year, HAW Hamburg",
+        date: "2026",
+        shortdescription: "Songbook For ›xanny‹ By Billie Eilish",
+        longdescription: "This Songbook tries to make the feelings and relations I get when listening to ›xanny‹ by Billie Eilish visible.<br><br>I played with a lot of mixed media and scanning. This makes for a great texture and atmosphere.<br><br>For me, this song was about two different parts of my life and personality. A conflict of interest.",
+        thumbnail: "Xanny_Thumbnail",
+        gallery: [
+            "what1.avif",
+            "what2.avif",
+            "what3.avif",
+            "what4.avif",
+            "what5.avif"
+        ],
+        folder: "featured-projects/what-is-it-about-them"
+    },
+    {
         title: "IGNIT",
         type: "Interaction Design, Base Year, HAW Hamburg",
         date: "2025",
@@ -124,22 +159,6 @@ const projectData = [
             "ignit11.avif"
         ],
         folder: "featured-projects/ignit"
-    },
-    {
-        title: "WHAT IS IT ABOUT THEM?",
-        type: "Editorial Design, Base Year, HAW Hamburg",
-        date: "2026",
-        shortdescription: "Songbook For ›xanny‹ By Billie Eilish",
-        longdescription: "This Songbook tries to make the feelings and relations I get when listening to ›xanny‹ by Billie Eilish visible.<br><br>I played with a lot of mixed media and scanning. This makes for a great texture and atmosphere.<br><br>For me, this song was about two different parts of my life and personality. A conflict of interest.",
-        thumbnail: "Xanny_Thumbnail",
-        gallery: [
-            "what1.avif",
-            "what2.avif",
-            "what3.avif",
-            "what4.avif",
-            "what5.avif"
-        ],
-        folder: "featured-projects/what-is-it-about-them"
     },
     {
         title: "WHAT IS A TYPEFACE?",
@@ -190,13 +209,13 @@ projectData.map(function(item) {
     }).join('');
 
     const markup = `
-            <li class="project-items">
+            <div class="project-items open-close">
                 <div class="project-details">
                     <div class="project-details-title-wrapper">
-                        <a class="project-details-title open-close animation-slideInTop" tabindex="0">
+                        <a class="project-details-title animation-slideInTop" tabindex="0">
                             <h2>${item.title}</h2>
                         </a>
-                        <div class="button open-close animation-slideInTop">
+                        <div class="button animation-slideInTop">
                             <a class="button-more" tabindex="0">+ EXPAND</a>
                             <a class="button-less" tabindex="0">- CLOSE</a>
                         </div>
@@ -216,8 +235,10 @@ projectData.map(function(item) {
                         </ul>
                     </div>
                 </div>
-                <img class="animation-slideInTop" src="featured-projects/thumbnails/${item.thumbnail}.avif" alt="Project Thumbnail">
-            </li>
+                <div>
+                    <img class="animation-slideInTop" src="featured-projects/thumbnails/${item.thumbnail}.avif" alt="Project Thumbnail">
+                </div>
+            </div>
             <section class="project-expand">
                 <p>${item.longdescription}</p>
                 <div class="project-gallery">
@@ -249,7 +270,7 @@ const seeMore = document.querySelectorAll('.open-close');
 
 seeMore.forEach(function(item) {
     item.addEventListener('click', function(e) {
-        const parent = e.currentTarget.parentElement.parentElement.parentElement.parentElement;
+        const parent = e.currentTarget.parentElement;
         parent.classList.toggle('show-more');
     })
 })
