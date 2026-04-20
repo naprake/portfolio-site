@@ -289,6 +289,7 @@ a {
     width: 210px;
 }
 
+
 .statement {
     width: 210px;
     opacity: 0.75;
@@ -382,6 +383,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 45px;
+    transition: all 0.2s ease-in-out;
 }
 
 .project:nth-child(2n) {
@@ -518,6 +520,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 45px;
+    transition: all 0.2s ease-in-out;
 }
 
 .project-expand p {
@@ -640,8 +643,8 @@ a {
     .sticky-header {
         position: relative;
         height: auto;
-        padding: 40px;
-        gap: 40px;
+        padding: 25px;
+        gap: 25px;
         border-right: transparent;
     }
     .header-text img {
@@ -662,7 +665,7 @@ a {
 
 
     .project {
-        padding: 40px;
+        padding: 25px;
         gap: 25px;
     }
     .project-items {
