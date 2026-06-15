@@ -15,7 +15,7 @@ html {
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23ffffff" width="20px" height="20px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto !important;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" stroke="%23ffffff" width="15px" height="15px" viewBox="0 0 10 10"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto !important;
 }
 
 *::-webkit-scrollbar {
@@ -237,27 +237,27 @@ a {
 
 
 .nav li:nth-child(1) {
-    animation-delay: 1.9s;
+    animation-delay: 1.8s;
 }
 
 .nav li:nth-child(2) {
-    animation-delay: 2s;
+    animation-delay: 1.9s;
 }
 
 .project-details-title {
-    animation-delay: 2.3s;
+    animation-delay: 2.1s;
 }
 
 .project-details-text {
-    animation-delay: 2.6s;
+    animation-delay: 2.3s;
 }
 
 .project-items img {
-    animation-delay: 2.9s;
+    animation-delay: 2.5s;
 }
 
 .button {
-    animation-delay: 3.6s;
+    animation-delay: 2.7s;
 }
 
 /* ----------------------------------------------------------- */
@@ -386,6 +386,10 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
+.show-more .project-items {
+    opacity: 1;
+}
+
 .project:nth-child(2n) {
     background: #0b0b0b;
 }
@@ -396,7 +400,6 @@ a {
     gap: 10px;
     align-content: flex-start;
     justify-content: flex-start;
-    scale: 1;
     transition: all 0.13s ease-in-out;
     opacity: 0.85;
 }
@@ -412,7 +415,6 @@ a {
 }
 
 .project-items:hover {
-    scale: 1.01;
     opacity: 1;
 }
 
@@ -561,7 +563,7 @@ a {
 }
 
 .project-gallery div:hover {
-    scale: 1.02;
+    scale: 1.01;
 }
 
 /* ----------------------------------------------------------- */

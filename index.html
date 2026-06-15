@@ -16,8 +16,8 @@
 
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" type="image/x-icon">
     <link rel="favicon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" type="image/x-icon">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="icons/favicon_32.png">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="icons/favicon_16.png">
 
@@ -96,7 +96,7 @@ const projectData = [
         title: "FRAUEN FORMEN FEMINISMUS",
         type: "Typography Design, Base Year, HAW Hamburg",
         date: "2026",
-        shortdescription: "Brochure With Feminist And Antidiscriminatory Literature",
+        shortdescription: "Brochure of Feminist and Antidiscriminatory Literature",
         longdescription: "The task for this project was to create a brochure with at least two different feminist and/or anti-discriminatory texts, either chosen from options presented by Lisa Marie Fechteler and Saskia Kühne­mund or picked by yourself.<br><br>In the process of making this brochure, I decided to play with bold shapes and placement. My focus was on making the pages look interesting but still be very readable.",
         thumbnail: "FFF_Thumbnail",
         gallery: [
@@ -113,7 +113,7 @@ const projectData = [
         title: "PÂVOIA",
         type: "Graphic Design Work, Client",
         date: "2026",
-        shortdescription: "A Bit Of Design Work For the Pâvoia Festival",
+        shortdescription: "Selected Work For the Pâvoia Festival",
         longdescription: "",
         thumbnail: "Pavoia_Thumbnail",
         gallery: [
@@ -125,60 +125,6 @@ const projectData = [
         folder: "featured-projects/pavoia"
     },
     {
-        title: "WHAT IS IT ABOUT THEM?",
-        type: "Editorial Design, Base Year, HAW Hamburg",
-        date: "2026",
-        shortdescription: "Songbook For ›xanny‹ By Billie Eilish",
-        longdescription: "This Songbook tries to make the feelings and relations I get when listening to ›xanny‹ by Billie Eilish visible.<br><br>I played with a lot of mixed media and scanning. This makes for a great texture and atmosphere.<br><br>For me, this song was about two different parts of my life and personality. A conflict of interest.",
-        thumbnail: "Xanny_Thumbnail",
-        gallery: [
-            "what1.avif",
-            "what2.avif",
-            "what3.avif",
-            "what4.avif",
-            "what5.avif"
-        ],
-        folder: "featured-projects/what-is-it-about-them"
-    },
-    {
-        title: "IGNIT",
-        type: "Interaction Design, Base Year, HAW Hamburg",
-        date: "2025",
-        shortdescription: "App Concept For An Everyday Problem",
-        longdescription: "An App for creative pauses and an alternative to doomscrolling. It should inspire, relieve blocks, and give space to form a community.<br><br>›Ignit‹ is an interactive App prototype. It is supposed to solve an everyday problem. In my case: (artists) blocks and doomscrolling.<br><br>I took inspiration from simple online forums like Reddit or 4chan that enable the focus to be on the community and interaction.",
-        thumbnail: "Ignit_Thumbnail",
-        gallery: [
-            "ignit1.avif",
-            "ignit3.avif",
-            "ignit4.avif",
-            "ignit5.avif",
-            "ignit6.avif",
-            "ignit7.avif",
-            "ignit8.avif",
-            "ignit9.avif",
-            "ignit11.avif"
-        ],
-        folder: "featured-projects/ignit"
-    },
-    {
-        title: "WHAT IS A TYPEFACE?",
-        type: "Type Design, Base Year, HAW Hamburg",
-        date: "2025",
-        shortdescription: "Poster Answering The Question ›What Is A Typeface?‹",
-        longdescription: "This poster was the result of trying to define and present my understanding of a typeface.<br><br>It presents the fluidity and human nature of type in contrast to its many systems and structures that keep text in clear patterns.",
-        thumbnail: "Typeface_Thumbnail",
-        gallery: [
-            "typeface1.avif",
-            "typeface2.avif",
-            "typeface3.avif",
-            "typeface4.avif",
-            "typeface5.avif",
-            "typeface6.avif",
-            "typeface7.avif"
-        ],
-        folder: "featured-projects/typeface"
-    },
-    {
         title: "ZEPHR",
         type: "Brand Design, Base Year, HAW Hamburg",
         date: "2025",
@@ -186,8 +132,6 @@ const projectData = [
         longdescription: "Zephr Coffee is the result of a Brand Design base course task. The goal was to create a new coffee brand identity from scratch.<br><br>Zephr is focused towards outdoorsy and adventurous people. It is supposed to portray movement and freshness.<br><br>The ›Zephr‹ stems from the Greek god of the west wind, ›Zephyr‹.",
         thumbnail: "Zephr_Thumbnail",
         gallery: [
-            "zephr1.avif",
-            "zephr2.avif",
             "zephr3.avif",
             "zephr4.avif",
             "zephr5.avif",
@@ -236,7 +180,7 @@ projectData.map(function(item) {
                     </div>
                 </div>
                 <div>
-                    <img class="animation-slideInTop" src="featured-projects/thumbnails/${item.thumbnail}.avif" alt="Project Thumbnail">
+                    <img class="animation-slideInTop no-lightbox" src="featured-projects/thumbnails/${item.thumbnail}.avif" alt="Project Thumbnail">
                 </div>
             </div>
             <section class="project-expand">
@@ -286,7 +230,7 @@ const lightboxImg = document.getElementById("lightbox-img");
 if (lightbox && lightboxImg) {
     scroller.addEventListener("click", (e) => {
         const target = e.target;
-        if (target && target.tagName === "IMG") {
+        if (target && target.tagName === "IMG" && !target.classList.contains("no-lightbox")) {
             lightboxImg.src = target.src;
             lightbox.classList.add("open");
         }
