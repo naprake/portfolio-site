@@ -153,8 +153,8 @@ projectData.map(function(item) {
     }).join('');
 
     const markup = `
-            <div class="project-items open-close">
-                <div class="project-details">
+            <div class="project-items">
+                <div class="project-details open-close">
                     <div class="project-details-title-wrapper">
                         <a class="project-details-title animation-slideInTop" tabindex="0">
                             <h2>${item.title}</h2>
@@ -178,15 +178,19 @@ projectData.map(function(item) {
                             <li class="text-right"><p>${item.date}</p></li>
                         </ul>
                     </div>
-                </div>
-                <div>
-                    <img class="animation-slideInTop no-lightbox" src="featured-projects/thumbnails/${item.thumbnail}.avif" alt="Project Thumbnail">
+                    <div class"project-details-image open-close"">
+                        <img class="animation-slideInTop no-lightbox" src="featured-projects/thumbnails/${item.thumbnail}.avif" alt="Project Thumbnail">
+                    </div>
                 </div>
             </div>
             <section class="project-expand">
                 <p>${item.longdescription}</p>
                 <div class="project-gallery">
                     ${galleryMarkup}
+                </div>
+                <div class="button animation-slideInTop open-close">
+                    <a class="button-more" tabindex="0">+ EXPAND</a>
+                    <a class="button-less" tabindex="0">- CLOSE</a>
                 </div>
             </section>
     `;
@@ -214,7 +218,7 @@ const seeMore = document.querySelectorAll('.open-close');
 
 seeMore.forEach(function(item) {
     item.addEventListener('click', function(e) {
-        const parent = e.currentTarget.parentElement;
+        const parent = e.currentTarget.parentElement.parentElement;
         parent.classList.toggle('show-more');
     })
 })

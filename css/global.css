@@ -421,8 +421,10 @@ a {
 .project-details {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-grow: 1;
     gap: 10px;
+    width: 100%;
 }
 
 .project-details-title-wrapper {
@@ -436,6 +438,10 @@ a {
 .project-details-title {
     opacity: 0;
     flex-grow: 1;
+}
+
+.project-details-image {
+    margin-left: auto;
 }
 
 .button-less,
@@ -485,7 +491,9 @@ a {
 
 .project-details-text {
     display: flex;
+    flex-basis: 410px;
     flex-direction: column;
+    margin-right: auto;
     gap: 10px;
     opacity: 0;
 }
