@@ -683,19 +683,23 @@ a {
         gap: 25px;
         opacity: 1;
     }
-    .project-items img {
-        display: block !important;
-        width: 100%;
-        height: auto;
-    }
     .project-details {
         flex-direction: column;
         gap: 25px;
     }
+    .project-details-text {
+        flex-basis: auto;
+    }
     .project-details-title-wrapper {
         flex-basis: auto !important;
     }
-    .button {
+    .project-details-image img {
+        display: none;
+    }
+    .project-details-image {
+        display: none;
+    }
+    .topbutton {
         display: none;
     }
     .show-more .project-expand {
