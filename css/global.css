@@ -39,7 +39,7 @@ html {
 }
 
 body {
-    color: #f4f4f4;
+    color: #ffffff;
     background-color: #0b0b0b;
     align-items: center;
     background-size: cover;
@@ -188,6 +188,12 @@ a {
         opacity: 1;
         transform: translateY(0);
     }
+    5% {
+        background-color: #ff0000;
+    }
+    80% {
+        background-color: #0b0b0b;
+    }
     99% {
         transform: translateY(0);
     }
@@ -202,6 +208,7 @@ a {
     overflow: hidden;
     animation: rotatePlus 3s linear infinite;
     font-size: 1.5rem;
+    mix-blend-mode: difference;
 }
 
 @keyframes rotatePlus {
@@ -356,6 +363,15 @@ a {
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 99999;
+}
+
+.lightbox p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 5vh;
+    padding-right: 5vw;
+    font-size: 24px;
 }
 
 .lightbox.open {

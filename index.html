@@ -55,7 +55,10 @@
     </div>
 </div> 
 
+<!-- LIGHTBOX -->
+
 <div class="lightbox" id="lightbox">
+    <p>&#x2715</p>
     <img id="lightbox-img" src="" alt="">
 </div>
 
@@ -220,8 +223,12 @@ seeMore.forEach(function(item) {
     item.addEventListener('click', function(e) {
         const parent = e.currentTarget.parentElement.parentElement;
         parent.classList.toggle('show-more');
+
+        if (parent.classList.contains('show-more')) {
+            this.parentElement.parentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     })
-})
+});
 
 </script>
 
