@@ -23,19 +23,16 @@ html {
 }
 
 *::selection {
-  background: #fff;
-  opacity: 1;
-  color: #000;
+  background: #0b0b0b;
+  color: #ff0000;
 }
 *::-moz-selection {
-  background: #fff;
-  opacity: 1;
-  color: #000;
+  background: #0b0b0b;
+  color: #ff0000;
 }
 *::-webkit-selection {
-  background: #fff;
-  opacity: 1;
-  color: #000;
+  background: #0b0b0b;
+  color: #ff0000;
 }
 
 body {
