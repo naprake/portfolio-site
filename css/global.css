@@ -59,6 +59,36 @@ a {
 }
 
 /* ----------------------------------------------------------- */
+/* ERROR                                                       */
+/* ----------------------------------------------------------- */
+
+.error {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errormessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.errormessage h1 {
+    font-size: 128px !important;
+}
+
+.errormessage p {
+    opacity: 0.8;
+}
+
+.errormessage p a {
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------- */
 /* TEXT STYLES                                                 */
 /* ----------------------------------------------------------- */
 
@@ -119,15 +149,11 @@ h2 {
 }
 
 h1 {
-    font-family: "HealTheWebB", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 64px;
     font-weight: normal;
     line-height: 1;
     letter-spacing: -0.022rem;
-}
-
-h1 span {
-    font-family: "HealTheWebA", serif;
 }
 
 a {
