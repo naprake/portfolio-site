@@ -23,15 +23,15 @@ html {
 }
 
 *::selection {
-  background: #0b0b0b;
+  background: transparent;
   color: #ff0000;
 }
 *::-moz-selection {
-  background: #0b0b0b;
+  background: transparent;
   color: #ff0000;
 }
 *::-webkit-selection {
-  background: #0b0b0b;
+  background: transparent;
   color: #ff0000;
 }
 
@@ -86,6 +86,24 @@ a {
 
 .errormessage p a {
     text-decoration: underline;
+}
+
+/* ----------------------------------------------------------- */
+/* SKETCH                                                      */
+/* ----------------------------------------------------------- */
+
+main {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    opacity: 1;
+}
+
+canvas {
+  display: block;
 }
 
 /* ----------------------------------------------------------- */
@@ -195,7 +213,7 @@ a {
     align-items: center;
     animation: slideAway 0.3s ease-in forwards;
     animation-delay: 0.5s;
-    z-index: 9999;
+    z-index: 4;
 }
 
 #loader {
@@ -297,7 +315,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 1;
     border-right: 1px solid #141414;
     gap: 45px;
 }
@@ -379,7 +397,7 @@ a {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 99999;
+    z-index: 3;
 }
 
 .lightbox p {
