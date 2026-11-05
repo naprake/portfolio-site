@@ -17,18 +17,18 @@ const projectData = [
         folder: "featured-projects/frauen-formen-feminismus"
     },
     {
-        title: "PÂVOIA",
-        type: "Graphic Design Work, Client",
+        title: "SPEKTRUM",
+        type: "Brand Design, 3rd Semester, HAW Hamburg",
         date: "2026",
-        shortdescription: "Selected Work For the Pâvoia Festival",
+        shortdescription: "A speculative visual identity concept for SPEKTRUM Festival",
         longdescription: "",
-        thumbnail: "Pavoia_Thumbnail.avif",
+        thumbnail: "Spektrum_Thumbnail.png",
         gallery: [
-            "pavoia1.avif",
-            "pavoia2.avif",
-            "pavoia4.avif"
+            "spektrum2.png",
+            "spektrum3.png",
+            "spektrum4.png"
         ],
-        folder: "featured-projects/pavoia"
+        folder: "featured-projects/spektrum"
     },
     {
         title: "ZEPHR",
@@ -62,39 +62,6 @@ const projectData = [
         ],
         folder: "featured-projects/what-is-it-about-them"
     },
-    {
-        title: "IGNIT",
-        type: "Interaction Design, Base Year, HAW Hamburg",
-        date: "2025",
-        shortdescription: "Ignit is a Visual Concept for an App",
-        longdescription: "",
-        thumbnail: "Ignit_Thumbnail.avif",
-        gallery: [
-            "ignit11.avif",
-            "ignit1.avif",
-            "ignit3.avif",
-            "ignit4.avif",
-            "ignit5.avif",
-            "ignit6.avif",
-            "ignit7.avif",
-            "ignit9.avif"
-        ],
-        folder: "featured-projects/ignit"
-    },
-    {
-        title: "SPEKTRUM",
-        type: "Brand Design, 3rd Semester, HAW Hamburg",
-        date: "2026",
-        shortdescription: "A speculative visual identity concept for SPEKTRUM Festival",
-        longdescription: "",
-        thumbnail: "Spektrum_Thumbnail.png",
-        gallery: [
-            "spektrum2.png",
-            "spektrum3.png",
-            "spektrum4.png"
-        ],
-        folder: "featured-projects/spektrum"
-    }
 ];
 
 const projectContainer = document.getElementById('projectlist');
@@ -112,9 +79,9 @@ projectData.map(function(item) {
             <div class="project-items">
                 <div class="project-details open-close">
                     <div class="project-details-title-wrapper">
-                        <a class="project-details-title animation-slideInTop" tabindex="0">
-                            <h2>${item.title}</h2>
-                        </a>
+                        <h2 class="project-details-title animation-slideInTop" tabindex="0">
+                            ${item.title}
+                        </h2>
                         <div class="button topbutton animation-slideInTop">
                             <a class="button-more" tabindex="0">+ EXPAND</a>
                             <a class="button-less" tabindex="0">- CLOSE</a>
